@@ -95,6 +95,8 @@ public class ArgsHelper {
            System.out.print("Target cps (-1 for max):\n>>");
            Main.cpuselect = Integer.parseInt(in.nextLine());
            in.close();
+           Main.proxies = (new ProxyGen(new File("proxies.txt"), args)).load();
+
            Main.run();
         }  
         
