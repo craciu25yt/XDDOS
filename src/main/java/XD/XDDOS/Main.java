@@ -10,7 +10,7 @@ import java.util.Scanner;
 
 public class Main {
    //all variables 
-   // make a file selector for gui so they can input proxy file or if they dont use that it will use proxy gen to gen proxy @glonk0
+   // make a file selector in gui so they can input proxy file or if they dont use that it will use proxy gen to gen proxy @glonk0
 
    public static File proxyFile;
    public static String origIP;
