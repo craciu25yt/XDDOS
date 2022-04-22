@@ -78,13 +78,13 @@ public class ArgsHelper {
                    "[47]" + CYAN_BOLD + " WaterFallBypass\n" + WHITE_BOLD +
                    "[48]" + CYAN_BOLD + " XDjoin\n" + WHITE_BOLD +
                    "[49]" + CYAN_BOLD + " XDSpam\n" + WHITE_BOLD +
-                   "[50]" + CYAN_BOLD + " YooniksCry\n\n"+WHITE_BOLD+
-                   "["+RED_BOLD+"Experimental Methods"+WHITE_BOLD+"]"+"\n\n"+WHITE_BOLD+
+                   "[50]" + CYAN_BOLD + " YooniksCry\n\n"+ WHITE_BOLD +
+                   "[" + RED_BOLD + "Experimental Methods" + WHITE_BOLD +"]" + "\n\n" + WHITE_BOLD +
                    "[01]" + CYAN_BOLD + " EmptyNames\n" + WHITE_BOLD +
                    "[02]" + CYAN_BOLD + " UUIDCrash\n" + WHITE_BOLD +
                    "[03]" + CYAN_BOLD + " BungeeDowner\n" + WHITE_BOLD +
                     "\n" +
-                   WHITE_BOLD+ "[" + RED_BOLD + "INFO" +WHITE_BOLD+"] Default Method is \"NettyDowner\" and type full name of the Methods don't be LAZY\n"+WHITE_BOLD+"\n"+
+                   WHITE_BOLD + "[" + RED_BOLD + "INFO" + WHITE_BOLD +"] Default Method is \"NettyDowner\" and type full name of the Methods don't be LAZY\n"+WHITE_BOLD+"\n"+
                    "TYPE NAME OF METHOD:" + GREEN_BOLD +
                    "\n>>" + RESET);
   

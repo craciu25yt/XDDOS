@@ -1,13 +1,13 @@
 package XD.XDDOS;
 
-import XD.XDDOS.methods.Method;
-import XD.XDDOS.utils.ArgsHelper;
-import XD.XDDOS.utils.ServerAddress;
-
 import java.io.File;
 import java.net.InetAddress;
 import java.util.Random;
-import java.util.Scanner;
+
+import XD.XDDOS.gui.Window;
+import XD.XDDOS.methods.Method;
+import XD.XDDOS.utils.ArgsHelper;
+import XD.XDDOS.utils.ServerAddress;
 
 public class Main {
    //all variables 
@@ -31,6 +31,8 @@ public class Main {
    public static int cpuselect;
    public static String serverhp;
 
+   public static final String DISCORD_USERNAME = "CatOnDrugs#7240";
+
    public static final String RED_BOLD = "\033[1;31m";    // RED
    public static final String GREEN_BOLD = "\033[1;32m";  // GREEN
    public static final String PURPLE_BOLD = "\033[1;35m"; // PURPLE
@@ -39,6 +41,8 @@ public class Main {
    public static final String CYAN_BOLD = "\033[1;36m";   // CYAN_BOLD
 
    public static void main(String[] args) throws Throwable {
+
+      new Window("XDDOS v6.9", 400, 300);
 
       System.out.println();
       System.out.println();
@@ -49,7 +53,7 @@ public class Main {
                                       "██╔╝ ██╗██████╔╝██████╔╝╚██████╔╝███████║\n" +
                                       "╚═╝  ╚═╝╚═════╝ ╚═════╝  ╚═════╝ ╚══════╝\n" +
                                       "\n" + RED_BOLD +
-                                      "MADE BY: " + WHITE_BOLD + "xD_Aeryz#7240\n" + WHITE_BOLD + "> " + PURPLE_BOLD +
+                                      "MADE BY: " + WHITE_BOLD + DISCORD_USERNAME +"\n" + WHITE_BOLD + "> " + PURPLE_BOLD +
                                       "DISCORD: " + GREEN_BOLD + "http://discord.io/XDDOS\n" + WHITE_BOLD + "> " + WHITE_BOLD +
                                       "Starting XDDOS :-\n" + RESET +
                                       "\n" + GREEN_BOLD +
