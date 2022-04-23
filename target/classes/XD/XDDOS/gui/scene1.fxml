@@ -2,7 +2,6 @@
 
 <?import javafx.geometry.Insets?>
 <?import javafx.geometry.Rectangle2D?>
-<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ChoiceBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextArea?>
@@ -14,10 +13,9 @@
 <?import javafx.scene.layout.FlowPane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="332.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="XD.XDDOS.gui.Controller">
+<AnchorPane prefHeight="491.0" prefWidth="695.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="XD.XDDOS.gui.Controller">
    <children>
-      <BorderPane minWidth="314.0" prefHeight="456.0" prefWidth="643.0" style="-fx-background-color: #212121;">
+      <BorderPane minWidth="314.0" prefHeight="491.0" prefWidth="695.0" style="-fx-background-color: #212121;">
          <top>
             <FlowPane hgap="10.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="38.0" style="-fx-background-color: #0F0F0F; -fx-background-radius: 0 0 10 10;" BorderPane.alignment="CENTER">
                <children>
@@ -40,17 +38,10 @@
                </padding>
             </FlowPane>
          </top>
-         <right>
-            <TextArea fx:id="consoleArea" editable="false" maxWidth="1100.0" prefWidth="1100.0" style="-fx-text-fill: #ffffff; -fx-background-color: #444444; -fx-border-color: #393939; -fx-background-radius: 10 10 10 10; -fx-font-family: Consolas;" text="Terminal" BorderPane.alignment="CENTER">
-               <BorderPane.margin>
-                  <Insets bottom="10.0" left="5.0" right="10.0" top="10.0" />
-               </BorderPane.margin>
-            </TextArea>
-         </right>
          <left>
-            <AnchorPane maxHeight="700.0" maxWidth="600.0" minHeight="352.0" minWidth="325.0" prefHeight="420.0" prefWidth="325.0" style="-fx-background-color: #212121;" BorderPane.alignment="CENTER">
+            <AnchorPane maxHeight="700.0" maxWidth="1000.0" minHeight="352.0" minWidth="325.0" prefHeight="442.0" prefWidth="703.0" style="-fx-background-color: #212121;" BorderPane.alignment="CENTER">
                <children>
-                  <ImageView fitHeight="482.0" fitWidth="643.0" layoutY="-48.0" opacity="0.25" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="497.0" fitWidth="695.0" layoutY="-48.0" opacity="0.25" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@unknown.png" />
                      </image>
@@ -58,18 +49,28 @@
                         <Rectangle2D />
                      </viewport>
                   </ImageView>
-                  <TextField fx:id="ipField" alignment="CENTER" layoutX="14.0" layoutY="14.0" opacity="0.87" promptText="Enter the server IP" style="-fx-background-color: #272727; -fx-text-fill: #cfcfcf; -fx-background-radius: 7; -fx-border-color: #161616; -fx-border-radius: 7;" />
-                  <TextField fx:id="portField" alignment="CENTER" layoutX="173.0" layoutY="14.0" opacity="0.87" promptText="Enter the server port" style="-fx-background-color: #272727; -fx-text-fill: #cfcfcf; -fx-background-radius: 7; -fx-border-radius: 7; -fx-border-color: #161616;" />
-                  <ChoiceBox fx:id="versionBox" layoutX="14.0" layoutY="64.0" opacity="0.87" prefWidth="149.0" style="-fx-background-color: #272727; -fx-border-color: #161616; -fx-text-fill: #cfcfcf; -fx-background-radius: 7; -fx-border-radius: 7;" />
-                  <Button layoutX="173.0" layoutY="64.0" mnemonicParsing="false" onAction="#chooseProxyFile" opacity="0.87" prefHeight="25.0" prefWidth="149.0" text="Choose proxies (Optional)">
+                  <AnchorPane layoutX="360.0" layoutY="14.0" prefHeight="235.0" prefWidth="321.0" style="-fx-background-color: #232323; -fx-border-color: #131313; -fx-border-radius: 10; -fx-background-radius: 10;" />
+                  <TextField fx:id="ipField" alignment="CENTER" layoutX="14.0" layoutY="14.0" opacity="0.87" prefHeight="30.0" prefWidth="336.0" promptText="Enter the server IP:PORT or domain" style="-fx-background-color: #272727; -fx-text-fill: #cfcfcf; -fx-background-radius: 7; -fx-border-color: #161616; -fx-border-radius: 7;" />
+                  <ChoiceBox fx:id="versionBox" layoutX="14.0" layoutY="64.0" opacity="0.87" prefHeight="30.0" prefWidth="160.0" style="-fx-background-color: #272727; -fx-border-color: #161616; -fx-text-fill: #cfcfcf; -fx-background-radius: 7; -fx-border-radius: 7;" />
+                  <ChoiceBox layoutX="190.0" layoutY="64.0" opacity="0.87" prefHeight="30.0" prefWidth="160.0" style="-fx-background-color: #272727; -fx-border-color: #161616; -fx-text-fill: #cfcfcf; -fx-background-radius: 7; -fx-border-radius: 7;" />
+                  <Label alignment="CENTER" layoutX="14.0" layoutY="45.0" prefHeight="17.0" prefWidth="160.0" text="Method:" textAlignment="CENTER" textFill="WHITE">
                      <font>
                         <Font size="11.0" />
                      </font>
-                  </Button>
-                  <Label alignment="CENTER" layoutX="14.0" layoutY="46.0" prefHeight="17.0" prefWidth="150.0" text="Choose your attack method:" textAlignment="CENTER" textFill="WHITE" />
-                  <Label fx:id="experimentalWarning" layoutX="5.0" layoutY="385.0" text="Warning: This method is experimental!" textFill="WHITE">
+                  </Label>
+                  <Label fx:id="experimentalWarning" layoutX="461.0" layoutY="264.0" text="Warning: This method is experimental!" textFill="WHITE">
                      <font>
                         <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <TextArea fx:id="consoleArea" editable="false" layoutX="2.0" layoutY="287.0" maxWidth="1100.0" opacity="0.75" prefHeight="151.0" prefWidth="689.0" style="-fx-text-fill: #ffffff; -fx-border-radius: 10; -fx-background-color: #121212; -fx-border-color: #111111; -fx-background-radius: 10; -fx-font-family: Consolas;" text="Terminal">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </TextArea>
+                  <Label alignment="CENTER" layoutX="190.0" layoutY="45.0" prefHeight="17.0" prefWidth="160.0" text="Version:" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font size="11.0" />
                      </font>
                   </Label>
                </children>
