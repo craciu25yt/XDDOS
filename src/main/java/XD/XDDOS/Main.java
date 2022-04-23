@@ -4,7 +4,6 @@ import java.io.File;
 import java.net.InetAddress;
 import java.util.Random;
 
-import XD.XDDOS.gui.Window;
 import XD.XDDOS.methods.Method;
 import XD.XDDOS.utils.ArgsHelper;
 import XD.XDDOS.utils.ServerAddress;
@@ -41,8 +40,6 @@ public class Main {
    public static final String CYAN_BOLD = "\033[1;36m";   // CYAN_BOLD
 
    public static void main(String[] args) throws Throwable {
-
-      new Window("XDDOS v6.9", 400, 300);
 
       System.out.println();
       System.out.println();

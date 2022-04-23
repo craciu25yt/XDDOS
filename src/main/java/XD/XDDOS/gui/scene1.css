@@ -1,0 +1,35 @@
+/* Button styling */
+.button {
+    -fx-background-color: #272727;
+    -fx-border-color: #161616;
+    -fx-text-fill: #cfcfcf;
+
+    -fx-background-radius: 7;
+    -fx-border-radius: 7;
+}
+
+.button:hover {
+    -fx-background-color: #373737
+}
+
+.button:pressed {
+    -fx-background-color: #585858;
+}
+
+/* Text Area styling */
+
+.text-area .scroll-pane {
+    -fx-background-color: transparent;
+}
+.text-area .scroll-pane .viewport{
+    -fx-background-color: transparent;
+}
+.text-area .scroll-pane .content{
+    -fx-background-color: transparent;
+}
+
+.text-area .content {
+    -fx-background-color: #555555;
+    -fx-border-color: #444444;
+    -fx-text-fill: #cfcfcf;
+}
