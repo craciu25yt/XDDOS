@@ -2,7 +2,7 @@
 
 <?import javafx.geometry.Insets?>
 <?import javafx.geometry.Rectangle2D?>
-<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
@@ -13,9 +13,9 @@
 <?import javafx.scene.layout.FlowPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="491.0" prefWidth="695.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="XD.XDDOS.gui.Controller">
+<AnchorPane prefHeight="550.0" prefWidth="774.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="XD.XDDOS.gui.Controller">
    <children>
-      <BorderPane minWidth="314.0" prefHeight="491.0" prefWidth="695.0" style="-fx-background-color: #212121;">
+      <BorderPane minWidth="314.0" prefHeight="550.0" prefWidth="774.0" style="-fx-background-color: #212121;">
          <top>
             <FlowPane hgap="10.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="38.0" style="-fx-background-color: #0F0F0F; -fx-background-radius: 0 0 10 10;" BorderPane.alignment="CENTER">
                <children>
@@ -39,36 +39,36 @@
             </FlowPane>
          </top>
          <left>
-            <AnchorPane maxHeight="700.0" maxWidth="1000.0" minHeight="352.0" minWidth="325.0" prefHeight="442.0" prefWidth="703.0" style="-fx-background-color: #212121;" BorderPane.alignment="CENTER">
+            <AnchorPane maxHeight="700.0" maxWidth="1000.0" minHeight="352.0" minWidth="750.0" prefHeight="442.0" prefWidth="774.0" style="-fx-background-color: #212121;" BorderPane.alignment="CENTER">
                <children>
-                  <ImageView fitHeight="497.0" fitWidth="695.0" layoutY="-48.0" opacity="0.25" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="548.0" fitWidth="774.0" layoutX="-1.0" layoutY="-47.0" opacity="0.25" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@unknown.png" />
+                        <Image url="@images/background.png" />
                      </image>
                      <viewport>
                         <Rectangle2D />
                      </viewport>
                   </ImageView>
-                  <AnchorPane layoutX="360.0" layoutY="14.0" prefHeight="235.0" prefWidth="321.0" style="-fx-background-color: #232323; -fx-border-color: #131313; -fx-border-radius: 10; -fx-background-radius: 10;" />
-                  <TextField fx:id="ipField" alignment="CENTER" layoutX="14.0" layoutY="14.0" opacity="0.87" prefHeight="30.0" prefWidth="336.0" promptText="Enter the server IP:PORT or domain" style="-fx-background-color: #272727; -fx-text-fill: #cfcfcf; -fx-background-radius: 7; -fx-border-color: #161616; -fx-border-radius: 7;" />
-                  <ChoiceBox fx:id="versionBox" layoutX="14.0" layoutY="64.0" opacity="0.87" prefHeight="30.0" prefWidth="160.0" style="-fx-background-color: #272727; -fx-border-color: #161616; -fx-text-fill: #cfcfcf; -fx-background-radius: 7; -fx-border-radius: 7;" />
-                  <ChoiceBox layoutX="190.0" layoutY="64.0" opacity="0.87" prefHeight="30.0" prefWidth="160.0" style="-fx-background-color: #272727; -fx-border-color: #161616; -fx-text-fill: #cfcfcf; -fx-background-radius: 7; -fx-border-radius: 7;" />
-                  <Label alignment="CENTER" layoutX="14.0" layoutY="45.0" prefHeight="17.0" prefWidth="160.0" text="Method:" textAlignment="CENTER" textFill="WHITE">
+                  <AnchorPane layoutX="421.0" layoutY="8.0" prefHeight="248.0" prefWidth="339.0" style="-fx-background-color: #232323; -fx-border-color: #131313; -fx-border-radius: 10; -fx-background-radius: 10;" />
+                  <TextField fx:id="ipField" alignment="CENTER" layoutX="14.0" layoutY="14.0" opacity="0.87" prefHeight="30.0" prefWidth="390.0" promptText="Enter the server IP:PORT or domain" style="-fx-background-color: #272727; -fx-text-fill: #cfcfcf; -fx-background-radius: 7; -fx-border-color: #161616; -fx-border-radius: 7;" />
+                  <ComboBox fx:id="methodBox" layoutX="14.0" layoutY="66.0" prefWidth="185.0" style="-fx-background-color: #272727; -fx-border-color: #161616; -fx-text-fill: #cfcfcf; -fx-background-radius: 7; -fx-border-radius: 7;" />
+                  <ComboBox fx:id="versionBox" layoutX="218.0" layoutY="66.0" prefWidth="185.0" style="-fx-background-color: #272727; -fx-border-color: #161616; -fx-text-fill: #cfcfcf; -fx-background-radius: 7; -fx-border-radius: 7;" />
+                  <Label alignment="CENTER" layoutX="26.0" layoutY="46.0" prefHeight="17.0" prefWidth="160.0" text="Method:" textAlignment="CENTER" textFill="WHITE">
                      <font>
                         <Font size="11.0" />
                      </font>
                   </Label>
-                  <Label fx:id="experimentalWarning" layoutX="461.0" layoutY="264.0" text="Warning: This method is experimental!" textFill="WHITE">
+                  <Label fx:id="experimentalWarning" layoutX="462.0" layoutY="320.0" text="Warning: This method is experimental!" textFill="WHITE">
                      <font>
                         <Font name="System Bold" size="12.0" />
                      </font>
                   </Label>
-                  <TextArea fx:id="consoleArea" editable="false" layoutX="2.0" layoutY="287.0" maxWidth="1100.0" opacity="0.75" prefHeight="151.0" prefWidth="689.0" style="-fx-text-fill: #ffffff; -fx-border-radius: 10; -fx-background-color: #121212; -fx-border-color: #111111; -fx-background-radius: 10; -fx-font-family: Consolas;" text="Terminal">
+                  <TextArea fx:id="consoleArea" editable="false" layoutX="9.0" layoutY="342.0" maxWidth="1100.0" opacity="0.75" prefHeight="151.0" prefWidth="754.0" style="-fx-text-fill: #ffffff; -fx-border-radius: 10; -fx-background-color: #121212; -fx-border-color: #111111; -fx-background-radius: 10; -fx-font-family: Consolas;" text="Terminal">
                      <opaqueInsets>
                         <Insets />
                      </opaqueInsets>
                   </TextArea>
-                  <Label alignment="CENTER" layoutX="190.0" layoutY="45.0" prefHeight="17.0" prefWidth="160.0" text="Version:" textAlignment="CENTER" textFill="WHITE">
+                  <Label alignment="CENTER" layoutX="230.0" layoutY="46.0" prefHeight="17.0" prefWidth="160.0" text="Version:" textAlignment="CENTER" textFill="WHITE">
                      <font>
                         <Font size="11.0" />
                      </font>
