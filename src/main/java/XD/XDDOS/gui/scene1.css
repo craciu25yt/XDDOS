@@ -90,6 +90,7 @@
 }
 
 .combo-box .list-view {
+    -fx-translate-y: 0;
     -fx-background-radius: 3 3 7 7;
     -fx-border-radius: 3 3 7 7;
     -fx-background-color: #2a2a2a;
@@ -98,6 +99,7 @@
 }
 
 .combo-box .list-view .list-cell {
+    -fx-translate-y: 0;
     -fx-alignment: center;
     -fx-cell-size: 28;
     -fx-background-radius: 0;
