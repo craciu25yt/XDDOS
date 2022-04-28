@@ -13,9 +13,9 @@
 <?import javafx.scene.layout.FlowPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="550.0" prefWidth="774.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="XD.XDDOS.gui.Controller">
+<AnchorPane prefHeight="688.0" prefWidth="968.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="XD.XDDOS.gui.Controller">
    <children>
-      <BorderPane minWidth="314.0" prefHeight="550.0" prefWidth="774.0" style="-fx-background-color: #212121;">
+      <BorderPane minWidth="314.0" prefHeight="688.0" prefWidth="968.0" style="-fx-background-color: #212121;">
          <top>
             <FlowPane hgap="10.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="38.0" style="-fx-background-color: #0F0F0F; -fx-background-radius: 0 0 10 10;" BorderPane.alignment="CENTER">
                <children>
@@ -38,10 +38,10 @@
                </padding>
             </FlowPane>
          </top>
-         <left>
-            <AnchorPane maxHeight="700.0" maxWidth="1000.0" minHeight="352.0" minWidth="750.0" prefHeight="442.0" prefWidth="774.0" style="-fx-background-color: #212121;" BorderPane.alignment="CENTER">
+         <center>
+            <AnchorPane maxHeight="700.0" maxWidth="1000.0" minHeight="352.0" minWidth="750.0" prefHeight="688.0" prefWidth="968.0" style="-fx-background-color: #212121;" BorderPane.alignment="CENTER">
                <children>
-                  <ImageView fitHeight="548.0" fitWidth="774.0" layoutX="-1.0" layoutY="-47.0" opacity="0.25" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="688.0" fitWidth="968.0" layoutX="-1.0" layoutY="-47.0" opacity="0.25" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@images/background.png" />
                      </image>
@@ -49,33 +49,36 @@
                         <Rectangle2D />
                      </viewport>
                   </ImageView>
-                  <AnchorPane layoutX="421.0" layoutY="8.0" prefHeight="248.0" prefWidth="339.0" style="-fx-background-color: #232323; -fx-border-color: #131313; -fx-border-radius: 10; -fx-background-radius: 10;" />
-                  <TextField fx:id="ipField" alignment="CENTER" layoutX="14.0" layoutY="14.0" opacity="0.87" prefHeight="30.0" prefWidth="390.0" promptText="Enter the server IP:PORT or domain" style="-fx-background-color: #272727; -fx-text-fill: #cfcfcf; -fx-background-radius: 7; -fx-border-color: #161616; -fx-border-radius: 7;" />
-                  <ComboBox fx:id="methodBox" layoutX="14.0" layoutY="66.0" prefWidth="185.0" style="-fx-background-color: #272727; -fx-border-color: #161616; -fx-text-fill: #cfcfcf; -fx-background-radius: 7; -fx-border-radius: 7;" />
-                  <ComboBox fx:id="versionBox" layoutX="218.0" layoutY="66.0" prefWidth="185.0" style="-fx-background-color: #272727; -fx-border-color: #161616; -fx-text-fill: #cfcfcf; -fx-background-radius: 7; -fx-border-radius: 7;" />
-                  <Label alignment="CENTER" layoutX="26.0" layoutY="46.0" prefHeight="17.0" prefWidth="160.0" text="Method:" textAlignment="CENTER" textFill="WHITE">
+                  <AnchorPane layoutX="577.0" layoutY="14.0" prefHeight="441.0" prefWidth="377.0" style="-fx-background-color: #232323; -fx-border-color: #131313; -fx-border-radius: 10; -fx-background-radius: 10;" />
+                  <TextField fx:id="ipField" alignment="CENTER" layoutX="14.0" layoutY="14.0" opacity="0.84" prefHeight="35.0" prefWidth="550.0" promptText="Enter the server IP:PORT or domain" style="-fx-background-color: #272727; -fx-text-fill: #cfcfcf; -fx-background-radius: 7; -fx-border-color: #161616; -fx-border-radius: 7;">
                      <font>
-                        <Font size="11.0" />
+                        <Font size="14.0" />
+                     </font></TextField>
+                  <ComboBox fx:id="methodBox" layoutX="14.0" layoutY="69.0" opacity="0.86" prefHeight="35.0" prefWidth="270.0" style="-fx-background-color: #272727; -fx-border-color: #161616; -fx-text-fill: #cfcfcf; -fx-background-radius: 7; -fx-border-radius: 7;" />
+                  <ComboBox fx:id="versionBox" layoutX="294.0" layoutY="69.0" opacity="0.86" prefHeight="35.0" prefWidth="270.0" style="-fx-background-color: #272727; -fx-border-color: #161616; -fx-text-fill: #cfcfcf; -fx-background-radius: 7; -fx-border-radius: 7;" />
+                  <Label alignment="CENTER" layoutX="15.0" layoutY="49.0" prefHeight="19.0" prefWidth="269.0" text="Method:" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font size="13.0" />
                      </font>
                   </Label>
-                  <Label fx:id="experimentalWarning" layoutX="462.0" layoutY="320.0" text="Warning: This method is experimental!" textFill="WHITE">
+                  <Label fx:id="experimentalWarning" layoutX="736.0" layoutY="456.0" text="Warning: This method is experimental!" textFill="WHITE">
                      <font>
                         <Font name="System Bold" size="12.0" />
                      </font>
                   </Label>
-                  <TextArea fx:id="consoleArea" editable="false" layoutX="9.0" layoutY="342.0" maxWidth="1100.0" opacity="0.75" prefHeight="151.0" prefWidth="754.0" style="-fx-text-fill: #ffffff; -fx-border-radius: 10; -fx-background-color: #121212; -fx-border-color: #111111; -fx-background-radius: 10; -fx-font-family: Consolas;" text="Terminal">
+                  <TextArea fx:id="consoleArea" editable="false" layoutX="12.0" layoutY="475.0" maxWidth="1100.0" opacity="0.75" prefHeight="151.0" prefWidth="944.0" style="-fx-text-fill: #ffffff; -fx-border-radius: 10; -fx-background-color: #121212; -fx-border-color: #111111; -fx-background-radius: 10; -fx-font-family: Consolas;" text="Terminal">
                      <opaqueInsets>
                         <Insets />
                      </opaqueInsets>
                   </TextArea>
-                  <Label alignment="CENTER" layoutX="230.0" layoutY="46.0" prefHeight="17.0" prefWidth="160.0" text="Version:" textAlignment="CENTER" textFill="WHITE">
+                  <Label alignment="CENTER" layoutX="294.0" layoutY="49.0" prefHeight="19.0" prefWidth="268.0" text="Version:" textAlignment="CENTER" textFill="WHITE">
                      <font>
-                        <Font size="11.0" />
+                        <Font size="13.0" />
                      </font>
                   </Label>
                </children>
             </AnchorPane>
-         </left>
+         </center>
       </BorderPane>
    </children>
 </AnchorPane>

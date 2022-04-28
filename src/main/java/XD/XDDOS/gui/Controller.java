@@ -4,14 +4,22 @@ import java.io.File;
 import java.net.URL;
 import java.util.HashMap;
 import java.util.ResourceBundle;
+
+import javafx.animation.Interpolator;
+import javafx.animation.KeyFrame;
+import javafx.animation.KeyValue;
+import javafx.animation.ScaleTransition;
+import javafx.animation.Timeline;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
+import javafx.scene.control.ListCell;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
+import javafx.util.Duration;
 
 public class Controller implements Initializable {
 
@@ -66,14 +74,70 @@ public class Controller implements Initializable {
     @FXML private ComboBox<String> methodBox;
     @FXML private ComboBox<String> versionBox;
 
+    private double comboBoxWidth;
+    private double comboBoxHeight;
+
     public static HashMap<String, Integer> VERSION_ID = new HashMap();
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+        comboBoxWidth = methodBox.getWidth(); // DEFAULT 270
+        comboBoxHeight = methodBox.getHeight(); // DEFAULT 35
+
         experimentalWarning.setVisible(false);
         initializeVersions();
         versionBox.getItems().addAll(versions);
-        versionBox.setVisibleRowCount(5);
+        versionBox.setVisibleRowCount(9);
+
+        versionBox.setCellFactory(lv -> {
+            ListCell<String> cell = new ListCell<String>() {
+                @Override
+                protected void updateItem(String item, boolean empty) {
+                    super.updateItem(item, empty);
+                    setText(item);
+                }
+            };
+            cell.hoverProperty().addListener((obs, wasHovered, isNowHovered) -> {
+                cell.setStyle("-fx-font-size: 14px");
+
+                Timeline timeline = new Timeline();
+                if(isNowHovered) {
+                    timeline.stop();
+                    timeline.getKeyFrames().addAll(
+                        new KeyFrame(Duration.ZERO, // set start position at 0
+                        new KeyValue(cell.scaleXProperty(), 1),
+                        new KeyValue(cell.scaleYProperty(), 1)
+                    ),
+                        new KeyFrame(new Duration(369), // set end position at 40s
+                        new KeyValue(cell.scaleXProperty(), 1.35),
+                        new KeyValue(cell.scaleYProperty(), 1.35)
+                    ));
+                }
+                else if(wasHovered ){
+                    timeline.stop();
+                    timeline.getKeyFrames().addAll(
+                        new KeyFrame(Duration.ZERO, // set start position at 0
+                        new KeyValue(cell.scaleXProperty(), 1.35),
+                        new KeyValue(cell.scaleYProperty(), 1.35)
+                    ),
+                        new KeyFrame(new Duration(369), // set end position at 40s
+                        new KeyValue(cell.scaleXProperty(), 1),
+                        new KeyValue(cell.scaleYProperty(), 1)
+                    ));
+                }
+                else if(!isNowHovered) {
+                    timeline.stop();
+                    timeline.getKeyFrames().addAll(
+                        new KeyFrame(Duration.ZERO, // set end position at 40s
+                        new KeyValue(cell.scaleXProperty(), 1),
+                        new KeyValue(cell.scaleYProperty(), 1)
+                    ));
+                }
+            timeline.play();
+
+            });
+            return cell;
+        });
     }
 
     public void chooseProxyFile() {
@@ -121,9 +185,4 @@ public class Controller implements Initializable {
         VERSION_ID.put("1.7.6 - 1.7.10", 5);
         VERSION_ID.put("1.7.2 - 1.7.5", 4);
     }
-
-    public void onComboBoxFocused() {
-        versionBox.setStyle("-fx-border-radius: 7 7 0 0");
-    }
-    
 }
