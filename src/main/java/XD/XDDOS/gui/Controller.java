@@ -18,6 +18,8 @@ import javafx.scene.control.Label;
 import javafx.scene.control.ListCell;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
+import javafx.scene.layout.Background;
+import javafx.scene.layout.BackgroundImage;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 import javafx.util.Duration;
@@ -65,7 +67,7 @@ public class Controller implements Initializable {
                 }
             };
             cell.hoverProperty().addListener((obs, wasHovered, isNowHovered) -> { // checks if it is hovered
-                hoverZoomAnimation(cell, 369, 1.35, isNowHovered);
+                hoverZoomAnimation(cell, 269, 1.35, isNowHovered);
             });
             return cell;
         });
@@ -79,7 +81,7 @@ public class Controller implements Initializable {
                 }
             };
             cell.hoverProperty().addListener((obs, wasHovered, isNowHovered) -> { // checks if it is hovered
-                hoverZoomAnimation(cell, 369, 1.35, isNowHovered);
+                hoverZoomAnimation(cell, 269, 1.35, isNowHovered);
             });
             return cell;
         });
@@ -119,8 +121,6 @@ public class Controller implements Initializable {
     public void chooseProxyFile() {
         File file = proxyFileChooser.showOpenDialog(new Stage());
     }
-
-    
 }
 
 
