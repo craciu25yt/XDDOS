@@ -126,3 +126,17 @@
     -fx-font-weight: bold;
     -fx-font-size: 14px;
 }
+
+/* SLIDERS */
+
+.mfx-slider {
+    -mfx-main-color: #8D38C9;
+    -mfx-main-color-hover: rgba(141, 38, 201, 0.2);
+    -mfx-main-color-pressed: rgba(141, 38, 201, 0.3);
+    -mfx-disabled-color: #2a2a2a;
+}
+
+#cpsSlider .track {
+    -fx-fill: #2a2a2a;
+    -fx-opacity: 0.75;
+}

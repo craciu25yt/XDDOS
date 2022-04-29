@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import io.github.palexdev.materialfx.controls.MFXSlider?>
 <?import javafx.geometry.Insets?>
 <?import javafx.geometry.Rectangle2D?>
 <?import javafx.scene.control.ComboBox?>
@@ -76,6 +77,7 @@
                         <Font size="13.0" />
                      </font>
                   </Label>
+                  <MFXSlider fx:id="cpsSlider" layoutX="15.0" layoutY="131.0" max="200.0" opacity="0.86" prefWidth="270.0" />
                </children>
             </AnchorPane>
          </center>

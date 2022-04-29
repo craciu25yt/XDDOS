@@ -4,6 +4,9 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 public class Utilities {
+    
+    public static final ArrayList<String> methodsList = new ArrayList<String>();
+    public static HashMap<String, Integer> VERSION_ID = new HashMap<String, Integer>();
 
     public static final String[] versions = {
         "1.18.2",
@@ -47,65 +50,64 @@ public class Utilities {
         "1.7.2 - 1.7.5"
     };
 
-
-    public static final ArrayList<String> methodsList = new ArrayList<String>();
-    public static HashMap<String, Integer> VERSION_ID = new HashMap();
-
     public static void listMethods() {
         methodsList.add("BETA");
-      methodsList.add("BigHandshake");
-      methodsList.add("BigPacket");
-      methodsList.add("BotJoiner");
-      methodsList.add("BungeeDowner");
-      methodsList.add("ChatSpam");
-      methodsList.add("ColorCrasher");
-      methodsList.add("CpuDowner");
-      methodsList.add("DoubleJoin");
-      methodsList.add("EmptyNames");
-      methodsList.add("EmptyPacket");
-      methodsList.add("ExtremeJoin");
-      methodsList.add("ExtremeKiller");
-      methodsList.add("Handshake");
-      methodsList.add("InstantDowner");
-      methodsList.add("InvalidData");
-      methodsList.add("InvalidNames");
-      methodsList.add("InvalidSpoof");
-      methodsList.add("IpSpooffFlood");
-      methodsList.add("Join");
-      methodsList.add("LegacyPing");
-      methodsList.add("LegitnameJoin");
-      methodsList.add("LocalHost");
-      methodsList.add("LongHost");
-      methodsList.add("LongNames");
-      methodsList.add("Memory");
-      methodsList.add("MOTD");
-      methodsList.add("nabCry");
-      methodsList.add("NettyDowner");
-      methodsList.add("Network");
-      methodsList.add("NullPing 2.0");//newnullping
-      methodsList.add("NullPing");
-      methodsList.add("Ping");
-      methodsList.add("PingJoin");
-      methodsList.add("Query");
-      methodsList.add("Queue");
-      methodsList.add("QuitExceptions");
-      methodsList.add("RAM");
-      methodsList.add("RandomExceptions");
-      methodsList.add("RandomPacket");
-      methodsList.add("ServerFucker");//this is sf
-      methodsList.add("Slapper");
-      methodsList.add("SmartBot");
-      methodsList.add("Spoof");
-      methodsList.add("TCPBypass");
-      methodsList.add("TCPHit");
-      methodsList.add("UltimateKiller");
-      methodsList.add("UltimateSmasher");
-      methodsList.add("UnexpectedPacket");
-      methodsList.add("uuidCrash");
-      methodsList.add("WaterfallBypass");
-      methodsList.add("XDJoin");
-      methodsList.add("xDSpam");
-      methodsList.add("YooniksCry");
+        methodsList.add("BigHandshake");
+        methodsList.add("BigPacket");
+        methodsList.add("BotJoiner");
+        methodsList.add("BungeeDowner");
+        methodsList.add("ChatSpam");
+        methodsList.add("ColorCrasher");
+        methodsList.add("CpuDowner");
+        methodsList.add("DoubleJoin");
+        methodsList.add("EmptyNames");
+        methodsList.add("EmptyPacket");
+        methodsList.add("ExtremeJoin");
+        methodsList.add("ExtremeKiller");
+        methodsList.add("Handshake");
+        methodsList.add("InstantDowner");
+        methodsList.add("InvalidData");
+        methodsList.add("InvalidNames");
+        methodsList.add("InvalidSpoof");
+        methodsList.add("IpSpooffFlood");
+        methodsList.add("Join");
+        methodsList.add("LegacyPing");
+        methodsList.add("LegitnameJoin");
+        methodsList.add("LocalHost");
+        methodsList.add("LongHost");
+        methodsList.add("LongNames");
+        methodsList.add("Memory");
+        methodsList.add("MOTD");
+        methodsList.add("nabCry");
+        methodsList.add("NettyDowner");
+        methodsList.add("Network");
+        methodsList.add("NullPing 2.0");//newnullping
+        methodsList.add("NullPing");
+        methodsList.add("Ping");
+        methodsList.add("PingJoin");
+        methodsList.add("Query");
+        methodsList.add("Queue");
+        methodsList.add("QuitExceptions");
+        methodsList.add("RAM");
+        methodsList.add("RandomExceptions");
+        methodsList.add("RandomPacket");
+        methodsList.add("ServerFucker");//this is sf
+        methodsList.add("Slapper");
+        methodsList.add("SmartBot");
+        methodsList.add("Spoof");
+        methodsList.add("TCPBypass");
+        methodsList.add("TCPHit");
+        methodsList.add("UltimateKiller");
+        methodsList.add("UltimateSmasher");
+        methodsList.add("UnexpectedPacket");
+        methodsList.add("uuidCrash");
+        methodsList.add("WaterfallBypass");
+        methodsList.add("XDJoin");
+        methodsList.add("xDSpam");
+        methodsList.add("YooniksCry");
+    }
+
+    public Utilities() {
     }
 
     public static void initializeVersions() {

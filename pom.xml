@@ -28,6 +28,11 @@
             <artifactId>netty-all</artifactId>
             <version>4.1.9.Final</version>
         </dependency> 
+        <dependency>
+            <groupId>io.github.palexdev</groupId>
+            <artifactId>materialfx</artifactId>
+            <version>11.13.5</version>
+        </dependency>
        </dependencies>  
         
     </project>  

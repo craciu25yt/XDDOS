@@ -2,13 +2,12 @@ package XD.XDDOS.gui;
 
 import java.io.File;
 import java.net.URL;
-import java.util.HashMap;
 import java.util.ResourceBundle;
 
-import javafx.animation.Interpolator;
+import io.github.palexdev.materialfx.controls.MFXSlider;
+
 import javafx.animation.KeyFrame;
 import javafx.animation.KeyValue;
-import javafx.animation.ScaleTransition;
 import javafx.animation.Timeline;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -24,26 +23,17 @@ import javafx.util.Duration;
 
 public class Controller implements Initializable {
 
-    FileChooser proxyFileChooser = new FileChooser();
-
-    
+    private FileChooser proxyFileChooser = new FileChooser();
 
     @FXML private TextArea consoleArea;
     @FXML private TextField ipField;
-    @FXML private TextField portField;
     @FXML private Label experimentalWarning;
     @FXML private ComboBox<String> methodBox;
     @FXML private ComboBox<String> versionBox;
-
-    private double comboBoxWidth;
-    private double comboBoxHeight;
-
+    @FXML private MFXSlider cpsSlider;
     
-
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        comboBoxWidth = methodBox.getWidth(); // DEFAULT 270
-        comboBoxHeight = methodBox.getHeight(); // DEFAULT 35
 
         experimentalWarning.setVisible(false);
 
@@ -55,6 +45,8 @@ public class Controller implements Initializable {
 
         versionBox.setVisibleRowCount(12);
         methodBox.setVisibleRowCount(12);
+
+        cpsSlider.setMax(100);
 
         versionBox.setCellFactory(lv -> { // makes components from combobox items
             ListCell<String> cell = new ListCell<String>() {
@@ -85,13 +77,17 @@ public class Controller implements Initializable {
         });
     }
 
+    public void chooseProxyFile() {
+        File file = proxyFileChooser.showOpenDialog(new Stage());
+        file.getAbsolutePath(); // just to remove the warning
+    }
+
     public void hoverZoomAnimation(Node node, int duration, double scale, boolean hovering) {
         
         Timeline timeline = new Timeline();
         if(hovering) {
-            timeline.stop();
             timeline.getKeyFrames().addAll(
-                new KeyFrame(Duration.ZERO, // set start position at 0
+                new KeyFrame(Duration.ZERO,
                 new KeyValue(node.scaleXProperty(), 1),
                 new KeyValue(node.scaleYProperty(), 1)
             ),
@@ -101,9 +97,8 @@ public class Controller implements Initializable {
             ));
         }
         else {
-            timeline.stop();
             timeline.getKeyFrames().addAll(
-                new KeyFrame(Duration.ZERO, // set start position at 0
+                new KeyFrame(Duration.ZERO,
                 new KeyValue(node.scaleXProperty(), scale),
                 new KeyValue(node.scaleYProperty(), scale)
             ),
@@ -113,22 +108,6 @@ public class Controller implements Initializable {
             ));
         }
     timeline.play();
-
     }
 
-    public void chooseProxyFile() {
-        File file = proxyFileChooser.showOpenDialog(new Stage());
-    }
-
-    
 }
-
-
-                // else {
-                //     timeline.stop();
-                //     timeline.getKeyFrames().addAll(
-                //         new KeyFrame(Duration.ZERO, // set end position at 40s
-                //         new KeyValue(cell.scaleXProperty(), 1),
-                //         new KeyValue(cell.scaleYProperty(), 1)
-                //     ));
-                // }
