@@ -21,7 +21,7 @@ public class TCPHIT
   implements Method
 {
   private Handshake handshake;
-  private byte[] joinpacket = (new LoginRequest(YooniksCry.bert)).getWrappedPacketC();
+  private byte[] joinpacket = (new LoginRequest(YooniksCry.name)).getWrappedPacketC();
   
   private byte[] bytes;
   

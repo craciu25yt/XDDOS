@@ -23,7 +23,7 @@ public class UltimateSmasher
 {
   private Handshake handshake;
   private byte[] bytes;
-  private byte[] joinpacket = (new LoginRequest(YooniksCry.bert)).getWrappedPacketC();
+  private byte[] joinpacket = (new LoginRequest(YooniksCry.name)).getWrappedPacketC();
   
   public UltimateSmasher() {
     this.handshake = new Handshake(Main.protcolID, Main.srvRecord, Main.port, 2);

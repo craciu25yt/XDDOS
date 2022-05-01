@@ -11,7 +11,7 @@ import io.netty.buffer.Unpooled;
 import io.netty.channel.Channel;
 
 public class YooniksCry implements Method {
-  public static String bert = "";
+  public static String name = "";//name of bot
   
   private Handshake handshake = new Handshake(Main.protcolID, Main.srvRecord, Main.port, 2);
   
@@ -21,7 +21,7 @@ public class YooniksCry implements Method {
     channel.writeAndFlush(Unpooled.buffer().writeBytes(this.handshake.getWrappedPacket()));
     ByteBuf b = Unpooled.buffer();
     ByteBufOutputStream bbbb = new ByteBufOutputStream(b);
-    channel.writeAndFlush(Unpooled.buffer().writeBytes((new LoginRequest(bert)).getWrappedPacketC()));
+    channel.writeAndFlush(Unpooled.buffer().writeBytes((new LoginRequest(name)).getWrappedPacketC()));
     channel.writeAndFlush(b);
     channel.writeAndFlush(bbbb);
     NettyBootstrap.integer++;
