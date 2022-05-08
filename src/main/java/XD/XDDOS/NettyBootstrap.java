@@ -81,7 +81,7 @@ public class NettyBootstrap {
             try {
                final ProxyLoader.Proxy proxy = NettyBootstrap.proxyLoader.getProxy();
                final Socks4ProxyHandler proxyHandler = new Socks4ProxyHandler(proxy.addrs);
-               proxyHandler.setConnectTimeoutMillis(5000L);
+               proxyHandler.setConnectTimeoutMillis(10000L);
                proxyHandler.connectFuture().addListener(new GenericFutureListener<Future<? super Channel>>() {
                   public void operationComplete(Future<? super Channel> f) throws Exception {
                      if (f.isSuccess() && proxyHandler.isConnected()) {

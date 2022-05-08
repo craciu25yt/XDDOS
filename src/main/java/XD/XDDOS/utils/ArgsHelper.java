@@ -94,9 +94,18 @@ public class ArgsHelper {
   
            System.out.print("Target cps (-1 for max):\n>>");
            Main.cpuselect = Integer.parseInt(in.nextLine());
-           in.close();
-           Main.proxies = (new ProxyGen(new File("proxies.txt"), args)).load();
 
+           System.out.print("Do you want to use our ProxyScrapper [y/n]:\n>>");
+           String useProxyScrapper = in.nextLine();
+           if(useProxyScrapper.equalsIgnoreCase("yes")||useProxyScrapper.equalsIgnoreCase("y")){
+           Main.proxies = (new ProxyGen(new File("proxies.txt"), args)).load();
+           }
+           else{
+             System.out.print("Proxy file name:\n>>");
+              Main.proxyFile = new File(in.nextLine());
+              Main.proxies = new ProxyLoader(Main.proxyFile);
+           }
+           in.close();
            Main.run();
         }  
         
