@@ -77,34 +77,20 @@ public class NettyBootstrap {
          public void channelInactive(ChannelHandlerContext ctx) throws Exception {
             ctx.channel().close();
          }
-
          protected void initChannel(final Channel c) throws Exception {
             try {
                final ProxyLoader.Proxy proxy = NettyBootstrap.proxyLoader.getProxy();
                final Socks4ProxyHandler proxyHandler = new Socks4ProxyHandler(proxy.addrs);
-               final ProxyLoader.Proxy proxy2 = NettyBootstrap.proxyLoader.getProxy();
-               final Socks5ProxyHandler proxyHandler2 = new Socks5ProxyHandler(proxy2.addrs);
-               proxyHandler.setConnectTimeoutMillis(10000L);
-               proxyHandler2.setConnectTimeoutMillis(10000L);
+               proxyHandler.setConnectTimeoutMillis(5000L);
                proxyHandler.connectFuture().addListener(new GenericFutureListener<Future<? super Channel>>() {
                   public void operationComplete(Future<? super Channel> f) throws Exception {
                      if (f.isSuccess() && proxyHandler.isConnected()) {
                         NettyBootstrap.method.accept(c, proxy);
                      } else {
-                        proxyHandler2.connectFuture().addListener(new GenericFutureListener<Future<? super Channel>>() {
-                           public void operationComplete(Future<? super Channel> f) throws Exception {
-                              if (f.isSuccess() && proxyHandler.isConnected()) {
-                                 NettyBootstrap.method.accept(c, proxy);
-                              } else {
-                                 if (NettyBootstrap.disableFailedProxies) {
-                                    NettyBootstrap.proxyLoader.disabledProxies.put(proxy, System.currentTimeMillis());
-                                 }
-         
-                                 c.close();
-                              }
-         
-                           }
-                        });
+                        if (NettyBootstrap.disableFailedProxies) {
+                           NettyBootstrap.proxyLoader.disabledProxies.put(proxy, System.currentTimeMillis());
+                        }
+
                         c.close();
                      }
 
