@@ -90,7 +90,7 @@ public class Main {
          } catch (Exception var4) {
             var4.printStackTrace();
             Thread.sleep(5000L);
-            return;
+            return;\
          }
 
          Methods.setupMethods();
@@ -98,6 +98,5 @@ public class Main {
       System.out.println("Running method: " + method);
       NettyBootstrap.start();
       }
-
-
+      
    }

@@ -5,7 +5,7 @@ import XD.XDDOS.methods.*;
 import java.util.HashMap;
 
 public class Methods {
-   public static final HashMap<String, Method> METHODS = new HashMap();
+   public static final HashMap<String, Method> METHODS = new HashMap<String,Method>();
 
    public static Method getByID(int i) {
       return (Method)METHODS.getOrDefault(i, (c, p) -> {
