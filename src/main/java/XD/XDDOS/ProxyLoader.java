@@ -50,13 +50,13 @@ public class ProxyLoader {
                   String[] split = s.split(":");
                   this.finals.add(new ProxyLoader.Proxy(new InetSocketAddress(split[0], Integer.parseInt(split[1]))));
                } catch (Throwable tw) {
-                  tw.printStackTrace();
+                  tw.getMessage();
                }
 
             });
          }
       } catch (Throwable var5) {
-         var5.printStackTrace();
+         var5.getMessage();
          return;
       }
 
