@@ -114,7 +114,7 @@ public class NettyBootstrap {
                Thread.sleep(1000L);
             } catch (InterruptedException var2) {
             }
-            System.out.println("Total Connections: " + totalConnections + " Total Seconds: " + totalSeconds);
+            System.out.println("Current Connections: " + integer + " Total Seconds: " + totalSeconds);
             ++totalSeconds;
             integer = 0;
             triedCPS = 0;
