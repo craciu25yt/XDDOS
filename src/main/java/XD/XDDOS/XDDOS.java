@@ -22,6 +22,7 @@ public class XDDOS {
    public static int nettyThreads;
    public static int loopThreads;
    public static ProxyLoader proxies;
+   public static boolean attackIsRunning = false;
 
       public static void main(String ip, int protocol, String method, int time, int CPS) throws Throwable {
 
