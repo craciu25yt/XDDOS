@@ -1,6 +1,6 @@
 package XD.XDDOS.methods;
 
-import XD.XDDOS.Main;
+import XD.XDDOS.XDDOS;
 import XD.XDDOS.NettyBootstrap;
 import XD.XDDOS.ProxyLoader;
 import XD.XDDOS.utils.Handshake;
@@ -14,7 +14,7 @@ import java.util.Random;
 public class Localhost
   implements Method
 {
-  private byte[] handshake = (new Handshake(Main.protcolID, "0.0.0.0", Main.port, 2)).getWrappedPacket();
+  private byte[] handshake = (new Handshake(XDDOS.protcolID, "0.0.0.0", XDDOS.port, 2)).getWrappedPacket();
 
   
   private String randomString(int len) {

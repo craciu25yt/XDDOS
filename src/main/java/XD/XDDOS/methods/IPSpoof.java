@@ -1,6 +1,6 @@
 package XD.XDDOS.methods;
 
-import XD.XDDOS.Main;
+import XD.XDDOS.XDDOS;
 import XD.XDDOS.NettyBootstrap;
 import XD.XDDOS.ProxyLoader;
 import io.netty.buffer.ByteBuf;
@@ -44,7 +44,7 @@ public class IPSpoof
     try {
       out.writeByte(59);
       out.writeByte(0);
-      writeVarInt(out, Main.protcolID);
+      writeVarInt(out, XDDOS.protcolID);
       out.writeByte(52);
       out.writeByte(49);
       out.writeByte(50);

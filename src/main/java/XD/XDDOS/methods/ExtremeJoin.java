@@ -1,6 +1,6 @@
 package XD.XDDOS.methods;
 
-import XD.XDDOS.Main;
+import XD.XDDOS.XDDOS;
 import XD.XDDOS.NettyBootstrap;
 import XD.XDDOS.ProxyLoader;
 import XD.XDDOS.utils.Handshake;
@@ -17,7 +17,7 @@ import java.util.Random;
 public class ExtremeJoin
   implements Method {
   private SecureRandom random = new SecureRandom();
-  private byte[] handshakebytes = (new Handshake(Main.protcolID, Main.srvRecord, Main.port, 2)).getWrappedPacket();
+  private byte[] handshakebytes = (new Handshake(XDDOS.protcolID, XDDOS.srvRecord, XDDOS.port, 2)).getWrappedPacket();
   SecureRandom r;
   String lol;
   final int a;

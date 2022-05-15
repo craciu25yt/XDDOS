@@ -1,6 +1,6 @@
 package XD.XDDOS.methods;
 
-import XD.XDDOS.Main;
+import XD.XDDOS.XDDOS;
 import XD.XDDOS.NettyBootstrap;
 import XD.XDDOS.ProxyLoader;
 import XD.XDDOS.utils.Handshake;
@@ -33,8 +33,8 @@ public class LoginPingMulticrasher
   }
   
   public LoginPingMulticrasher() {
-    this.handshakebytes = (new Handshake(Main.protcolID, Main.srvRecord, Main.port, 1)).getWrappedPacket();
-    this.handshake = new Handshake(Main.protcolID, Main.srvRecord, Main.port, 2);
+    this.handshakebytes = (new Handshake(XDDOS.protcolID, XDDOS.srvRecord, XDDOS.port, 1)).getWrappedPacket();
+    this.handshake = new Handshake(XDDOS.protcolID, XDDOS.srvRecord, XDDOS.port, 2);
     this.bytes = this.handshake.getWrappedPacket();
   }
   

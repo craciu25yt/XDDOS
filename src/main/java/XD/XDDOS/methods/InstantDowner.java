@@ -1,7 +1,7 @@
 package XD.XDDOS.methods;
 
 import XD.XDDOS.NettyBootstrap;
-import XD.XDDOS.Main;
+import XD.XDDOS.XDDOS;
 import XD.XDDOS.utils.Handshake;
 import XD.XDDOS.utils.LoginRequest;
 import XD.XDDOS.ProxyLoader;
@@ -11,7 +11,7 @@ import java.security.SecureRandom;
 
 public class InstantDowner
   implements Method {
-    private byte[] handshakebytes = (new Handshake(Main.protcolID, Main.srvRecord, Main.port, 2)).getWrappedPacket();
+    private byte[] handshakebytes = (new Handshake(XDDOS.protcolID, XDDOS.srvRecord, XDDOS.port, 2)).getWrappedPacket();
 
   
   public void accept(Channel channel, ProxyLoader.Proxy proxy) {

@@ -20,7 +20,7 @@ public class ProxyGen {
     private List<String> proxies = new CopyOnWriteArrayList<>();
     private File proxyFile;
 
-    public ProxyGen(File proxyFile, String[] args) {
+    public ProxyGen(File proxyFile) {
         System.out.println("Parsing proxy...");
         this.proxyFile = proxyFile;
         try{

