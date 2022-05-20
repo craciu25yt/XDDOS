@@ -51,13 +51,18 @@
                      </viewport>
                   </ImageView>
                   <AnchorPane layoutX="577.0" layoutY="14.0" prefHeight="441.0" prefWidth="377.0" style="-fx-background-color: #232323; -fx-border-color: #131313; -fx-border-radius: 10; -fx-background-radius: 10;" />
-                  <TextField fx:id="ipField" alignment="CENTER" layoutX="14.0" layoutY="14.0" opacity="0.84" prefHeight="35.0" prefWidth="550.0" promptText="Enter the server IP:PORT or domain" style="-fx-background-color: #272727; -fx-text-fill: #cfcfcf; -fx-background-radius: 7; -fx-border-color: #161616; -fx-border-radius: 7;">
+                  <TextField fx:id="ipField" alignment="CENTER" layoutX="14.0" layoutY="14.0" opacity="0.84" prefHeight="50.0" prefWidth="550.0" style="-fx-background-color: #272727; -fx-text-fill: #cfcfcf; -fx-background-radius: 7; -fx-border-color: #161616; -fx-border-radius: 7;">
                      <font>
                         <Font size="14.0" />
                      </font></TextField>
-                  <ComboBox fx:id="methodBox" layoutX="14.0" layoutY="69.0" opacity="0.86" prefHeight="35.0" prefWidth="270.0" style="-fx-background-color: #272727; -fx-border-color: #161616; -fx-text-fill: #cfcfcf; -fx-background-radius: 7; -fx-border-radius: 7;" />
-                  <ComboBox fx:id="versionBox" layoutX="294.0" layoutY="69.0" opacity="0.86" prefHeight="35.0" prefWidth="270.0" style="-fx-background-color: #272727; -fx-border-color: #161616; -fx-text-fill: #cfcfcf; -fx-background-radius: 7; -fx-border-radius: 7;" />
-                  <Label alignment="CENTER" layoutX="15.0" layoutY="49.0" prefHeight="19.0" prefWidth="269.0" text="Method:" textAlignment="CENTER" textFill="WHITE">
+                  <Label fx:id="ipPromptLabel" alignment="CENTER" layoutX="15.0" layoutY="29.0" onMouseClicked="#focusOnIPField" opacity="0.64" prefHeight="20.0" prefWidth="549.0" text="Enter server IP:PORT or domain" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <ComboBox fx:id="methodBox" layoutX="14.0" layoutY="94.0" opacity="0.86" prefHeight="35.0" prefWidth="270.0" style="-fx-background-color: #272727; -fx-border-color: #161616; -fx-text-fill: #cfcfcf; -fx-background-radius: 7; -fx-border-radius: 7;" />
+                  <ComboBox fx:id="versionBox" layoutX="294.0" layoutY="94.0" opacity="0.86" prefHeight="35.0" prefWidth="270.0" style="-fx-background-color: #272727; -fx-border-color: #161616; -fx-text-fill: #cfcfcf; -fx-background-radius: 7; -fx-border-radius: 7;" />
+                  <Label alignment="CENTER" layoutX="15.0" layoutY="74.0" prefHeight="19.0" prefWidth="269.0" text="Method:" textAlignment="CENTER" textFill="WHITE">
                      <font>
                         <Font size="13.0" />
                      </font>
@@ -72,12 +77,12 @@
                         <Insets />
                      </opaqueInsets>
                   </TextArea>
-                  <Label alignment="CENTER" layoutX="294.0" layoutY="49.0" prefHeight="19.0" prefWidth="268.0" text="Version:" textAlignment="CENTER" textFill="WHITE">
+                  <Label alignment="CENTER" layoutX="294.0" layoutY="74.0" prefHeight="19.0" prefWidth="268.0" text="Version:" textAlignment="CENTER" textFill="WHITE">
                      <font>
                         <Font size="13.0" />
                      </font>
                   </Label>
-                  <MFXSlider fx:id="cpsSlider" layoutX="15.0" layoutY="131.0" max="200.0" opacity="0.86" prefWidth="270.0" />
+                  <MFXSlider fx:id="cpsSlider" layoutX="21.0" layoutY="156.0" max="200.0" opacity="0.86" prefWidth="260.0" />
                </children>
             </AnchorPane>
          </center>

@@ -83,7 +83,19 @@
 
 /*     COMBO BOX STYLES     */
 
+.combo-box {
+    -fx-text-alignment: center;
+    -fx-alignment: center;
+}
+
+.combo-box-base {
+    -fx-text-alignment: center;
+    -fx-alignment: center;
+}
+
 .combo-box-base .text{
+    -fx-alignment: center;
+    -fx-text-alignment: center;
     -fx-translate-y: 0;
     -fx-fill: #cfcfcf;
     -fx-font-size: 14px;
@@ -139,4 +151,19 @@
 #cpsSlider .track {
     -fx-fill: #2a2a2a;
     -fx-opacity: 0.75;
+}
+
+#cpsSlider .mfx-tooltip .container {
+	-fx-background-color: rgb(0, 0, 0);
+	-fx-background-radius: 5;
+	-fx-border-color: lightgray;
+	-fx-border-radius: 5;
+	-fx-max-width: 400;
+}
+
+#ipField {
+    -mfx-main-color: #8D38C9;
+    -fx-border-color: #0000;
+    -fx-text-fill: #cfcfcf;
+    -fx-font-size: 16px;
 }

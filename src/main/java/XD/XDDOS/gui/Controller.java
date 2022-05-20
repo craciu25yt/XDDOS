@@ -17,6 +17,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.ListCell;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
+import javafx.scene.layout.AnchorPane;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 import javafx.util.Duration;
@@ -25,15 +26,52 @@ public class Controller implements Initializable {
 
     private FileChooser proxyFileChooser = new FileChooser();
 
+    @FXML private AnchorPane mainPane;
+
     @FXML private TextArea consoleArea;
     @FXML private TextField ipField;
     @FXML private Label experimentalWarning;
+    @FXML private Label ipPromptLabel;
     @FXML private ComboBox<String> methodBox;
     @FXML private ComboBox<String> versionBox;
     @FXML private MFXSlider cpsSlider;
     
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+
+        ipField.focusedProperty().addListener((observableValue, oldValue, newValue) -> {
+
+            Timeline timeline = new Timeline();
+            if(ipField.getText().trim().equalsIgnoreCase("")) {
+                if((newValue || !ipField.getText().trim().equalsIgnoreCase(""))) {
+                    timeline.getKeyFrames().addAll(
+                        new KeyFrame(Duration.ZERO,
+                        new KeyValue(ipPromptLabel.translateXProperty(), 0),
+                        new KeyValue(ipPromptLabel.translateYProperty(), 0)
+                    ),
+                        new KeyFrame(new Duration(269),
+                        new KeyValue(ipPromptLabel.translateXProperty(), -190),
+                        new KeyValue(ipPromptLabel.translateYProperty(), -12)
+                    ));
+                }
+                else {
+                    timeline.getKeyFrames().addAll(
+                        new KeyFrame(Duration.ZERO,
+                        new KeyValue(ipPromptLabel.translateXProperty(), -190),
+                        new KeyValue(ipPromptLabel.translateYProperty(), -12)
+                    ),
+                        new KeyFrame(new Duration(369),
+                        new KeyValue(ipPromptLabel.translateXProperty(), 0),
+                        new KeyValue(ipPromptLabel.translateYProperty(), 0)
+                    ));
+                }
+            
+                timeline.play();
+                
+                hoverZoomAnimation(ipPromptLabel, 269, 0.8, (newValue || !ipField.getText().trim().equalsIgnoreCase("")));
+            }
+        });
+
 
         experimentalWarning.setVisible(false);
 
@@ -47,7 +85,9 @@ public class Controller implements Initializable {
         methodBox.setVisibleRowCount(12);
 
         cpsSlider.setMax(100);
-
+        cpsSlider.popupPaddingProperty().set(10000);
+        
+        
         versionBox.setCellFactory(lv -> { // makes components from combobox items
             ListCell<String> cell = new ListCell<String>() {
                 @Override
@@ -108,6 +148,10 @@ public class Controller implements Initializable {
             ));
         }
     timeline.play();
+    }
+
+    public void focusOnIPField() {
+        ipField.requestFocus();
     }
 
 }
