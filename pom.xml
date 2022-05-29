@@ -17,6 +17,14 @@
       <name>XDDOS</name>  
       
       <dependencies>
+
+         <dependency>
+           <groupId>org.openjfx</groupId>
+           <artifactId>javafx</artifactId>
+           <version>19-ea+7</version>
+           <type>pom</type>
+         </dependency>
+
         <dependency>  
             <groupId>org.jsoup</groupId>
             <artifactId>jsoup</artifactId>

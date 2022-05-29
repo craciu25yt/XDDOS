@@ -51,7 +51,6 @@ public class Utilities {
     };
 
     public static void listMethods() {
-        methodsList.add("BETA");
         methodsList.add("BigHandshake");
         methodsList.add("BigPacket");
         methodsList.add("BotJoiner");
@@ -107,8 +106,7 @@ public class Utilities {
         methodsList.add("YooniksCry");
     }
 
-    public Utilities() {
-    }
+    public Utilities() {}
 
     public static void initializeVersions() {
         VERSION_ID.put("1.18.2", 758);
