@@ -46,7 +46,7 @@ public class XDDOS {
                                       " ╚███╔╝ ██║  ██║██║  ██║██║   ██║███████╗\n" +
                                       " ██╔██╗ ██║  ██║██║  ██║██║   ██║╚════██║\n" +
                                       "██╔╝ ██╗██████╔╝██████╔╝╚██████╔╝███████║\n" +
-                                      "╚═╝  ╚═╝╚═════╝ ╚═════╝  ╚═════╝ ╚══════╝\n" +
+                                      "╚═╝  ╚═╝╚═════╝ ╚═════╝  ╚═════╝ ╚══════╝\n v7.1" +
                                       "\n" + RED_BOLD +
                                       "MADE BY: " + WHITE_BOLD + DISCORD_USERNAME +"\n" + WHITE_BOLD + "> " + PURPLE_BOLD +
                                       "DISCORD: " + GREEN_BOLD + "http://discord.io/XDDOS\n" + WHITE_BOLD + "> " + WHITE_BOLD +
