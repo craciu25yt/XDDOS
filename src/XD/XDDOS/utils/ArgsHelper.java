@@ -17,7 +17,7 @@ public class ArgsHelper {
    public static final String RESET = "\033[0m";
    public static final String CYAN_BOLD = "\033[1;36m";   // CYAN_BOLD
 
-    public static void UserFrndly() throws Throwable {
+    public static void UserFrndly(String[] args) throws Throwable {
 
         Scanner in = new Scanner(System.in);
 
@@ -95,7 +95,7 @@ public class ArgsHelper {
            System.out.print("Target cps (-1 for max):\n>>");
            XDDOS.cpuselect = Integer.parseInt(in.nextLine());
            in.close();
-           XDDOS.proxies = (new ProxyGen(new File("proxies.txt"))).load();
+           XDDOS.proxies = (new ProxyGen(new File("proxies.txt"),args)).load();
            XDDOS.run();
         }
 
@@ -110,7 +110,7 @@ public class ArgsHelper {
          if (args.length == 6) {
              String yorn = args[5];
              if (yorn.equalsIgnoreCase("y") || yorn.isEmpty()) {
-                 XDDOS.proxies = (new ProxyGen(new File("proxies.txt"))).load();
+                 XDDOS.proxies = (new ProxyGen(new File("proxies.txt"),args)).load();
              }
              if (yorn.equalsIgnoreCase("n")) {
                  XDDOS.proxyFile = new File("proxies.txt");

@@ -18,7 +18,7 @@ public class ProxyGen {
     private List<String> proxies = new CopyOnWriteArrayList<>();
     private File proxyFile;
 
-    public ProxyGen(File proxyFile) {
+    public ProxyGen(File proxyFile, String[] args) {
         System.out.println("Parsing proxy...");
         this.proxyFile = proxyFile;
         try {

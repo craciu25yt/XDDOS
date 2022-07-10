@@ -136,11 +136,7 @@ public class NettyBootstrap {
             attack.interrupt();
             XDDOS.attackRunning = false;
             System.out.println("Attack finished!");
-            try {
-                ArgsHelper.UserFrndly();
-            } catch (Throwable e) {
-                e.printStackTrace();
-            }
+            System.exit(0);
         });
         Counter.setPriority(1);
         Counter.start();

@@ -38,7 +38,7 @@ public class XDDOS {
    public static final String CYAN_BOLD = "\033[1;36m";   // CYAN_BOLD
 
    public static void main(String[] args) throws Throwable {
-
+      System.setProperty("file.encoding", "UTF-8");
       System.out.println();
       System.out.println();
       System.out.println(WHITE_BOLD + "██╗  ██╗██████╗ ██████╗  ██████╗ ███████╗\n" +
@@ -55,7 +55,7 @@ public class XDDOS {
                                       "STARTING\n" + RESET );
 
       if(args.length != 6){
-         ArgsHelper.UserFrndly();
+         ArgsHelper.UserFrndly(args);
       }
       else{
          ArgsHelper.OneLine(args);

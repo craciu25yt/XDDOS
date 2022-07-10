@@ -50,13 +50,13 @@ public class ProxyLoader {
                   String[] split = s.split(":");
                   this.finals.add(new ProxyLoader.Proxy(new InetSocketAddress(split[0], Integer.parseInt(split[1]))));
                } catch (Throwable tw) {
-                  tw.printStackTrace();
+                  tw.getMessage();
                }
 
             });
          }
       } catch (Throwable var5) {
-         var5.printStackTrace();
+         var5.getMessage();
          return;
       }
 
@@ -65,7 +65,7 @@ public class ProxyLoader {
       try {
          this.exe.awaitTermination(Long.MAX_VALUE, TimeUnit.SECONDS);
       } catch (InterruptedException var4) {
-         var4.printStackTrace();
+         var4.getMessage();
       }
 
       System.out.println(this.finals.size() + " proxies loaded.");
@@ -81,7 +81,7 @@ public class ProxyLoader {
 
          this.bufferedReader.close();
       } catch (Throwable var4) {
-         var4.printStackTrace();
+         var4.getMessage();
          return;
       }
 
@@ -90,7 +90,7 @@ public class ProxyLoader {
       try {
          this.exe.awaitTermination(Long.MAX_VALUE, TimeUnit.SECONDS);
       } catch (InterruptedException var3) {
-         var3.printStackTrace();
+         var3.getMessage();
       }
 
       System.out.println(this.finals.size() + " proxies loaded.");
