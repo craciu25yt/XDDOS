@@ -1,17 +1,21 @@
-## Getting Started
+## XDDOS
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+XDDOS is a tool to stress test your minecraft server.
 
-## Folder Structure
+## Features avilable
 
-The workspace contains two folders by default, where:
+XDDOS has the following features:
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+- `53` different attack methods
+- `auto proxy generator` so u dont have to worry about proxies
+- `user friendly CLI` dont worry about hard to remeber startup commands
+- also supports startup commands 
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
-
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+> Startup Command: 
+>for user friendly CLI:
+>- `java -jar XDDOS.jar`
+>for manual startup:
+>- `java -jar XDDOS.jar [ip] [protocol] [method] [time] [cps] [y/n] <proxyfilename>` (y/n is optional y if you want to use auto proxy >generator and n to use your own proxy) (proxyfilename is only used when u want to specify your own proxy)
 
 ## Dependency Management
 
