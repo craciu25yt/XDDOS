@@ -15,11 +15,19 @@ import java.util.stream.Collectors;
 
 public class ProxyGen {
 
+    public static final String RED_BOLD = "\033[1;31m";    // RED
+    public static final String GREEN_BOLD = "\033[1;32m";  // GREEN
+    public static final String PURPLE_BOLD = "\033[1;35m"; // PURPLE
+    public static final String WHITE_BOLD = "\033[1;37m";  // WHITE
+    public static final String RESET = "\033[0m";
+    public static final String CYAN_BOLD = "\033[1;36m";   // CYAN_BOLD
+
+
     private List<String> proxies = new CopyOnWriteArrayList<>();
     private File proxyFile;
 
     public ProxyGen(File proxyFile, String[] args) {
-        System.out.println("Parsing proxy...");
+        System.out.println(GREEN_BOLD+"["+RED_BOLD+"XDDOS"+GREEN_BOLD+"] "+WHITE_BOLD+" Parsing proxy...");
         this.proxyFile = proxyFile;
         try {
             Document proxyLists = Jsoup.connect("https://api.proxyscrape.com/v2/?request=displayproxies&proxytype=socks4").get();

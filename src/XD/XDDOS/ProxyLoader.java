@@ -15,6 +15,14 @@ import java.util.concurrent.ThreadFactory;
 import java.util.concurrent.TimeUnit;
 
 public class ProxyLoader {
+
+   public static final String RED_BOLD = "\033[1;31m";    // RED
+    public static final String GREEN_BOLD = "\033[1;32m";  // GREEN
+    public static final String PURPLE_BOLD = "\033[1;35m"; // PURPLE
+    public static final String WHITE_BOLD = "\033[1;37m";  // WHITE
+    public static final String RESET = "\033[0m";
+    public static final String CYAN_BOLD = "\033[1;36m";   // CYAN_BOLD
+
    private File file;
    private BufferedReader bufferedReader;
    public volatile List<ProxyLoader.Proxy> finals = Collections.synchronizedList(new ArrayList());
@@ -68,7 +76,7 @@ public class ProxyLoader {
          var4.getMessage();
       }
 
-      System.out.println(this.finals.size() + " proxies loaded.");
+      System.out.println(GREEN_BOLD+"["+RED_BOLD+"XDDOS"+GREEN_BOLD+"] "+WHITE_BOLD+this.finals.size() + " proxies loaded\n");
    }
 
    private void loadBuffer() {

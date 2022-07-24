@@ -96,6 +96,7 @@ public class ArgsHelper {
            System.out.print("Target cps (-1 for max):\n"+GREEN_BOLD+">> "+WHITE_BOLD);
            XDDOS.cpuselect = Integer.parseInt(in.nextLine());
            in.close();
+           System.out.println("\n"+GREEN_BOLD+"["+RED_BOLD+"XDDOS"+GREEN_BOLD+"]"+WHITE_BOLD+" Starting...\n"+RESET);
            XDDOS.proxies = (new ProxyGen(new File("proxies.txt"),args)).load();
            XDDOS.run();
         }

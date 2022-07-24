@@ -1,7 +1,6 @@
 package XD.XDDOS;
 
 import XD.XDDOS.methods.Method;
-import XD.XDDOS.utils.ArgsHelper;
 import io.netty.bootstrap.Bootstrap;
 import io.netty.channel.Channel;
 import io.netty.channel.ChannelHandler;
@@ -21,6 +20,13 @@ import java.net.InetAddress;
 import java.util.concurrent.ThreadFactory;
 
 public class NettyBootstrap {
+
+    public static final String RED_BOLD = "\033[1;31m";    // RED
+    public static final String GREEN_BOLD = "\033[1;32m";  // GREEN
+    public static final String PURPLE_BOLD = "\033[1;35m"; // PURPLE
+    public static final String WHITE_BOLD = "\033[1;37m";  // WHITE
+    public static final String RESET = "\033[0m";
+    public static final String CYAN_BOLD = "\033[1;36m";   // CYAN_BOLD
 
     public static final EventLoopGroup loopGroup;
     public static final Class<? extends Channel> socketChannel;
@@ -128,7 +134,7 @@ public class NettyBootstrap {
                     Thread.sleep(1000L);
                 } catch (InterruptedException var2) {
                 }
-                System.out.println("Current CPS: " + integer + " Time Left: " + (XDDOS.duration-totalSeconds));
+                System.out.println(GREEN_BOLD+"["+RED_BOLD+"XDDOS"+GREEN_BOLD+"]"+WHITE_BOLD+" Current CPS: "+ GREEN_BOLD + integer +WHITE_BOLD+" Time Left: " + RED_BOLD +(XDDOS.duration-totalSeconds)+RESET);
                 ++totalSeconds;
                 integer = 0;
                 triedCPS = 0;
