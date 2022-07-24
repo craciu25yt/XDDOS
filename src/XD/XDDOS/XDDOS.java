@@ -27,7 +27,7 @@ public class XDDOS {
    public static ProxyLoader proxies;
    public static int cpuselect;
    public static String serverhp;
-   public static final String DISCORD_USERNAME = "vortexD#1521";
+   public static final String DISCORD_USERNAME = "CatOnDrugs#1521";
    public static boolean attackRunning = false;
 
    public static final String RED_BOLD = "\033[1;31m";    // RED
