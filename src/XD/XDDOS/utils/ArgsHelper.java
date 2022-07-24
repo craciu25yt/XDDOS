@@ -22,10 +22,10 @@ public class ArgsHelper {
         Scanner in = new Scanner(System.in);
 
 
-           System.out.print("You server <IP:PORT>:\n"+GREEN_BOLD+">>");
+           System.out.print("You server <IP:PORT>:\n"+GREEN_BOLD+">> "+WHITE_BOLD);
            XDDOS.serverhp = in.nextLine();
 
-           System.out.print("Server protocol (https://wiki.vg/Protocol_version_numbers):\n"+GREEN_BOLD+">>");
+           System.out.print("Server protocol (https://wiki.vg/Protocol_version_numbers):\n"+GREEN_BOLD+">> "+WHITE_BOLD);
            XDDOS.protcolID = Integer.parseInt(in.nextLine());
 
            System.out.print("["+RED_BOLD+"Methods"+WHITE_BOLD+"]"+"\n\n"+WHITE_BOLD+
@@ -87,13 +87,13 @@ public class ArgsHelper {
                     "\n" +
                    WHITE_BOLD + "[" + RED_BOLD + "INFO" + WHITE_BOLD +"] Default Method is \"NettyDowner\" and type full name of the Methods don't be LAZY\n"+WHITE_BOLD+"\n"+
                    "TYPE NAME OF METHOD:" + GREEN_BOLD +
-                   "\n>>" + RESET);
+                   "\n>> " +WHITE_BOLD);
 
            XDDOS.methodID = in.nextLine().toLowerCase();
-           System.out.print("Time (secons):\n"+GREEN_BOLD+">>");
+           System.out.print("Time (secons):\n"+GREEN_BOLD+">> "+WHITE_BOLD);
            XDDOS.duration = Integer.parseInt(in.nextLine());
 
-           System.out.print("Target cps (-1 for max):\n"+GREEN_BOLD+">>");
+           System.out.print("Target cps (-1 for max):\n"+GREEN_BOLD+">> "+WHITE_BOLD);
            XDDOS.cpuselect = Integer.parseInt(in.nextLine());
            in.close();
            XDDOS.proxies = (new ProxyGen(new File("proxies.txt"),args)).load();
