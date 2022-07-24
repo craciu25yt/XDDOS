@@ -15,7 +15,8 @@ import io.netty.buffer.ByteBufOutputStream;
 import io.netty.buffer.Unpooled;
 import io.netty.channel.Channel;
 
-public class BotRaid {
+public class BotRaid 
+    implements Method {
     private Handshake handshake = new Handshake(XDDOS.protcolID, XDDOS.srvRecord, XDDOS.port, 2);
 
     private byte[] bytes = this.handshake.getWrappedPacket();

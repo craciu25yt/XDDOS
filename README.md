@@ -22,10 +22,15 @@ To get protocols go to https://wiki.vg/Protocol_version_numbers and see Version 
 
 Startup Command: 
  For user friendly CLI/auto mode:
-- `java -jar XDDOS.jar`  
+```
+$ java -jar XDDOS.jar
+```
 
 for manual startup:
-- `java -jar XDDOS.jar [ip] [protocol] [method] [time] [cps] [y/n] <proxyfilename>` (y/n is optional y if you want to use auto proxy generator and n to use your own proxy) (proxyfilename is only used when u want to specify your own proxy)
+```
+$ java -jar XDDOS.jar [ip] [protocol] [method] [time] [cps] [y/n] <proxyfilename>
+```
+(y/n is optional y if you want to use auto proxy generator and n to use your own proxy) (proxyfilename is only used when u want to specify your own proxy)
 
  example:  
 to run botjoiner for 10 seconds with 10 cps and use auto proxy generator:
