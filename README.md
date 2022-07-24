@@ -22,7 +22,9 @@ To get protocols go to https://wiki.vg/Protocol_version_numbers and see Version 
 
 Startup Command: 
  For user friendly CLI/auto mode:
-- ```java -jar XDDOS.jar```
+- ```
+java -jar XDDOS.jar
+```
 
 for manual startup:
 - ```java -jar XDDOS.jar [ip] [protocol] [method] [time] [cps] [y/n] <proxyfilename>```
