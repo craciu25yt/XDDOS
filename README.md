@@ -1,4 +1,5 @@
 ## XDDOS
+![alt text](https://cdn.discordapp.com/attachments/949290845222350928/964583278789148763/cover.png)
 
 XDDOS is a tool to stress test your minecraft server.
 
