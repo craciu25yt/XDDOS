@@ -22,10 +22,10 @@ public class ArgsHelper {
         Scanner in = new Scanner(System.in);
 
 
-           System.out.print("You server <IP:PORT>:\n>>");
+           System.out.print("You server <IP:PORT>:\n"+GREEN_BOLD+">>");
            XDDOS.serverhp = in.nextLine();
 
-           System.out.print("Server protocol (https://wiki.vg/Protocol_version_numbers):\n>>");
+           System.out.print("Server protocol (https://wiki.vg/Protocol_version_numbers):\n"+GREEN_BOLD+">>");
            XDDOS.protcolID = Integer.parseInt(in.nextLine());
 
            System.out.print("["+RED_BOLD+"Methods"+WHITE_BOLD+"]"+"\n\n"+WHITE_BOLD+
@@ -90,10 +90,10 @@ public class ArgsHelper {
                    "\n>>" + RESET);
 
            XDDOS.methodID = in.nextLine().toLowerCase();
-           System.out.print("Time (secons):\n>>");
+           System.out.print("Time (secons):\n"+GREEN_BOLD+">>");
            XDDOS.duration = Integer.parseInt(in.nextLine());
 
-           System.out.print("Target cps (-1 for max):\n>>");
+           System.out.print("Target cps (-1 for max):\n"+GREEN_BOLD+">>");
            XDDOS.cpuselect = Integer.parseInt(in.nextLine());
            in.close();
            XDDOS.proxies = (new ProxyGen(new File("proxies.txt"),args)).load();
