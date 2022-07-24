@@ -2,8 +2,6 @@
     "java.project.sourcePaths": ["src"],
     "java.project.outputPath": "bin",
     "java.project.referencedLibraries": [
-        "lib/**/*.jar",
-        "c:\\Users\\someo\\Downloads\\netty-all-4.1.17.Final.jar",
-        "c:\\Users\\someo\\Downloads\\jsoup-1.13.1.jar"
+        "lib/**/*.jar"
     ]
 }

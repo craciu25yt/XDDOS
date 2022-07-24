@@ -25,6 +25,7 @@ public class Methods {
    public static void setupMethods() {
       registerMethod("bigpacket", (Method)new BigPacket());
       registerMethod("botjoiner", (Method)new BotJoiner());
+      registerMethod("botraid", (Method)new BotRaid());
       registerMethod("doublejoin", (Method)new DoubleJoin());
       registerMethod("emptypacket", (Method)new EmptyPacket());
       registerMethod("xdspam", (Method)new XDSPAM());

@@ -83,6 +83,7 @@ public class ArgsHelper {
                    "[01]" + CYAN_BOLD + " EmptyNames\n" + WHITE_BOLD +
                    "[02]" + CYAN_BOLD + " UUIDCrash\n" + WHITE_BOLD +
                    "[03]" + CYAN_BOLD + " BungeeDowner\n" + WHITE_BOLD +
+                   "[04]" + CYAN_BOLD + " BotRaid\n" + WHITE_BOLD +
                     "\n" +
                    WHITE_BOLD + "[" + RED_BOLD + "INFO" + WHITE_BOLD +"] Default Method is \"NettyDowner\" and type full name of the Methods don't be LAZY\n"+WHITE_BOLD+"\n"+
                    "TYPE NAME OF METHOD:" + GREEN_BOLD +
