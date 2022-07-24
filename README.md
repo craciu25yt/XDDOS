@@ -6,7 +6,7 @@ XDDOS is a tool to stress test your minecraft server.
 
 XDDOS has the following features:
 
-- `53` different attack methods
+- `54` different attack methods
 - `auto proxy generator` so you dont have to worry about proxies
 - `user friendly CLI` dont worry about hard to remeber startup commands
 - also supports startup commands 
@@ -45,6 +45,7 @@ to use user friendly CLI:
 - BigHandshake
 - BigPacket
 - BotJoiner
+- BotRiad
 - BungeeDowner
 - ChatSpam
 - ColorCrasher
