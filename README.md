@@ -1,6 +1,7 @@
-## XDDOS
+![alt text](https://cdn.discordapp.com/attachments/949290845222350928/964583278789148763/cover.png)
+#                  XDDOS
 
-XDDOS is a tool to stress test your minecraft server.
+## XDDOS is a tool to stress test your minecraft server.
 
 ## Features avilable
 
@@ -20,30 +21,40 @@ CPS is Connection per second. Use -1 as cps to use max power
 
 To get protocols go to https://wiki.vg/Protocol_version_numbers and see Version number
 
-Startup Command: 
- For user friendly CLI/auto mode:
+### Startup Command: 
+
+- For user friendly CLI/auto mode:
 ```
-$ java -jar XDDOS.jar
+java -jar XDDOS.jar
 ```
 
-for manual startup:
+- for manual startup:
 ```
-$ java -jar XDDOS.jar [ip] [protocol] [method] [time] [cps] [y/n] <proxyfilename>
+java -jar XDDOS.jar [ip] [protocol] [method] [time] [cps] [y/n] <proxyfilename>
 ```
 (y/n is optional y if you want to use auto proxy generator and n to use your own proxy) (proxyfilename is only used when u want to specify your own proxy)
 
- example:  
-to run botjoiner for 10 seconds with 10 cps and use auto proxy generator:
-- `java -jar XDDOS.jar localhost:25565 47 botjoiner 10 10 y`  
+### example:  
 
-to run botjoiner for 10 seconds with 10 cps and use your own proxy:
-- `java -jar XDDOS.jar localhost:25565 47 botjoiner 10 10 n proxy.txt`  
+- To run botjoiner for 10 seconds with 10 cps and use auto proxy generator:
+```
+java -jar XDDOS.jar localhost:25565 47 botjoiner 10 10 y
+```
 
-to run botjoiner for 10 seconds with MAX POWER or CPS and use auto proxy generator:
-- `java -jar XDDOS.jar localhost:25565 47 botjoiner 10 -1 y`  
+- To run botjoiner for 10 seconds with 10 cps and use your own proxy:
+```
+java -jar XDDOS.jar localhost:25565 47 botjoiner 10 10 n proxy.txt
+```
 
-to use user friendly CLI:
-- `java -jar XDDOS.jar`
+- To run botjoiner for 10 seconds with MAX POWER or CPS and use auto proxy generator:
+```
+java -jar XDDOS.jar localhost:25565 47 botjoiner 10 -1 y
+```
+
+- To use user friendly CLI:
+```
+java -jar XDDOS.jar
+```
 
 ## Methods avilable
 
