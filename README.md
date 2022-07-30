@@ -112,3 +112,11 @@ java -jar XDDOS.jar
 - XDJoin
 - xDSpam
 - YooniksCry
+
+## Credits:-
+Sorry i forgot to give credits before
+I used MCBot as base and and some methods of MCSTORM 
+I made this project to just improve me skills in java and have some fun
+i am not pro dev so ya i used base and try to understand how its done after getting a good understanding
+i did some tweaks in some part of code and added somethings of my own and released it public
+```and not sell it like MiniFlex who just straight up coppy MCSTROM and was selling it```
