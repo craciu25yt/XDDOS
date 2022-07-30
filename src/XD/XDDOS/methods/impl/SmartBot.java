@@ -25,8 +25,6 @@ import io.netty.buffer.ByteBuf;
       implements IMethod{
 
       private byte[] handshake = (new Handshake(XDDOS.protcolID, XDDOS.srvRecord, XDDOS.port, 2)).getWrappedPacket();
-      private volatile int i = 0;
-      private static SecureRandom RANDOM = new SecureRandom();
 
 
       public void accept(Channel channel, ProxyLoader.Proxy proxy) {

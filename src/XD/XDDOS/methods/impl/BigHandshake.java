@@ -8,10 +8,8 @@ import io.netty.buffer.ByteBufOutputStream;
 import io.netty.buffer.Unpooled;
 import io.netty.channel.Channel;
 import java.io.IOException;
-import java.security.SecureRandom;
 
 public class BigHandshake implements IMethod {
-  private SecureRandom r = new SecureRandom();
 
   private String lol = "";
 

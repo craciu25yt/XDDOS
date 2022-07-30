@@ -15,7 +15,6 @@ import java.io.ByteArrayOutputStream;
 import java.io.DataOutputStream;
 import java.io.IOException;
 import java.security.SecureRandom;
-import java.util.Random;
 import java.util.zip.Deflater;
 
 public class NettyDowner
@@ -24,19 +23,6 @@ public class NettyDowner
   private Handshake handshake;
   private byte[] bytes;
   private byte[] packet;
-
-  private String randomString(int len) {
-    int leftLimit = 97;
-    int rightLimit = 122;
-    int targetStringLength = len;
-    Random random = new Random();
-    StringBuilder buffer = new StringBuilder(targetStringLength);
-    for (int i = 0; i < targetStringLength; i++) {
-      int randomLimitedInt = leftLimit + (int)(random.nextFloat() * (rightLimit - leftLimit + 1));
-      buffer.append((char)randomLimitedInt);
-    }
-    return buffer.toString();
-  }
 
   public NettyDowner() {
     try {
@@ -110,9 +96,6 @@ public class NettyDowner
     out.write(250);
     char[] achar = packet.toCharArray();
     out.writeShort(achar.length);
-    char[] cArray = achar;
-    int n = achar.length;
-    int n2 = 0;
     out.write(input);
     byte[] data = bytes.toByteArray();
     bytes.close();

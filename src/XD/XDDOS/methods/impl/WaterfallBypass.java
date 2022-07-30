@@ -21,8 +21,6 @@ implements IMethod{
 
   public void accept(Channel channel, ProxyLoader.Proxy proxy) {
     channel.writeAndFlush(Unpooled.buffer().writeBytes(this.handshakebytes));
-    ByteBuf b = Unpooled.buffer();
-    ByteBufOutputStream bbbb = new ByteBufOutputStream(b);
     channel.writeAndFlush(Integer.valueOf(1));
     channel.writeAndFlush(Integer.valueOf(0));
     channel.writeAndFlush(Unpooled.buffer().writeBytes(this.ad));

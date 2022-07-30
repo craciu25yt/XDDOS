@@ -3,7 +3,6 @@ package XD.XDDOS.methods.impl;
 import XD.XDDOS.XDDOS;
 import XD.XDDOS.methods.IMethod;
 import XD.XDDOS.utils.NettyBootstrap;
-import XD.XDDOS.utils.packet.Handshake;
 import XD.XDDOS.utils.packet.PacketUtils;
 import XD.XDDOS.utils.proxy.ProxyLoader;
 import io.netty.buffer.ByteBuf;
@@ -19,9 +18,6 @@ import java.util.zip.Deflater;
 
 public class ColorCrasher
   implements IMethod {
-  private Handshake handshake = new Handshake(XDDOS.protcolID, XDDOS.srvRecord, XDDOS.port, 2);
-
-  private byte[] bytes = this.handshake.getWrappedPacket();
 
   public static byte[] createoverflowPacket() throws IOException {
     ByteArrayOutputStream bytes = new ByteArrayOutputStream();

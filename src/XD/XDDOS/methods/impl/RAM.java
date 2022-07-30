@@ -15,26 +15,12 @@ import io.netty.channel.Channel;
 import java.io.ByteArrayOutputStream;
 import java.io.DataOutputStream;
 import java.io.IOException;
-import java.util.Random;
 import java.util.zip.Deflater;
 
 public class RAM
   implements IMethod {
   private Handshake handshake;
   private byte[] bytes;
-
-  private String randomString(int len) {
-    int leftLimit = 97;
-    int rightLimit = 122;
-    int targetStringLength = len;
-    Random random = new Random();
-    StringBuilder buffer = new StringBuilder(targetStringLength);
-    for (int i = 0; i < targetStringLength; i++) {
-      int randomLimitedInt = leftLimit + (int)(random.nextFloat() * (rightLimit - leftLimit + 1));
-      buffer.append((char)randomLimitedInt);
-    }
-    return buffer.toString();
-  }
 
   public RAM() {
     this.handshake = new Handshake(XDDOS.protcolID, XDDOS.srvRecord, XDDOS.port, 2);

@@ -1,6 +1,5 @@
 package XD.XDDOS.methods;
 
-import XD.XDDOS.methods.*;
 import XD.XDDOS.methods.impl.Beta;
 import XD.XDDOS.methods.impl.BigHandshake;
 import XD.XDDOS.methods.impl.BigPacket;
@@ -60,7 +59,7 @@ import XD.XDDOS.methods.impl.queue;
 import java.util.HashMap;
 
 public class Methods {
-   public static final HashMap<String, IMethod> METHODS = new HashMap();
+   public static final HashMap<String, IMethod> METHODS = new HashMap<String,IMethod>();
 
    public static IMethod getByID(int i) {
       return (IMethod)METHODS.getOrDefault(i, (c, p) -> {

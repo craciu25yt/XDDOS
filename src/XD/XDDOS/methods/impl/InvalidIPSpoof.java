@@ -10,12 +10,10 @@ import io.netty.buffer.ByteBufOutputStream;
 import io.netty.buffer.Unpooled;
 import io.netty.channel.Channel;
 import java.io.IOException;
-import java.security.SecureRandom;
 import java.util.Random;
 
 public class InvalidIPSpoof
   implements IMethod {
-  private SecureRandom r = new SecureRandom();
   private String lol = "";
   private int a = 14;
 

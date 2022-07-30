@@ -34,7 +34,7 @@ public class ProxyLoader {
       }
    });
    private volatile int at = 0;
-   public ConcurrentHashMap<ProxyLoader.Proxy, Long> disabledProxies = new ConcurrentHashMap(1000);
+   public ConcurrentHashMap<ProxyLoader.Proxy, Long> disabledProxies = new ConcurrentHashMap<ProxyLoader.Proxy, Long>(1000);
 
    public ProxyLoader(File file) {
       if (file != null) {

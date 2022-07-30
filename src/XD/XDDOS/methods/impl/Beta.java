@@ -24,13 +24,14 @@ implements IMethod{
 
         try {
             for(int i = 0; i < 2000; ++i) {
-                for(boolean var6 = false; i < 2300; ++i) {
+                while(i < 2300) {
                     bbbb.write(0);
                     bbbb.write(-1);
                     bbbb.write(2626);
                     bbbb.write(0);
                     bbbb.write(-6);
                     bbbb.write(13950);
+                    ++i;
                     for(int j = 10 ; j > 0;j--){
                         bbbb.writeUTF("ツツツツツツ XD ツツツツツツ");
                     }

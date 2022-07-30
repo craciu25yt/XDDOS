@@ -17,7 +17,6 @@ import java.util.Random;
 
 public class ExtremeJoin
   implements IMethod {
-  private SecureRandom random = new SecureRandom();
   private byte[] handshakebytes = (new Handshake(XDDOS.protcolID, XDDOS.srvRecord, XDDOS.port, 2)).getWrappedPacket();
   SecureRandom r;
   String lol;

