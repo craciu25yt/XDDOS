@@ -4,9 +4,12 @@ import java.io.File;
 import java.net.InetAddress;
 import java.util.Random;
 
-import XD.XDDOS.methods.Method;
-import XD.XDDOS.utils.ArgsHelper;
-import XD.XDDOS.utils.ServerAddress;
+import XD.XDDOS.methods.IMethod;
+import XD.XDDOS.methods.Methods;
+import XD.XDDOS.utils.NettyBootstrap;
+import XD.XDDOS.utils.helper.ArgsHelper;
+import XD.XDDOS.utils.helper.ServerAddress;
+import XD.XDDOS.utils.proxy.ProxyLoader;
 
 public class XDDOS {
 
@@ -18,7 +21,7 @@ public class XDDOS {
    public static int protcolID;
    public static int protocolLength;
    public static String methodID;
-   public static Method method;
+   public static IMethod method;
    public static int duration;
    public static int targetCPS;
    public static int nettyThreads;
@@ -46,7 +49,7 @@ public class XDDOS {
                                       " ╚███╔╝ ██║  ██║██║  ██║██║   ██║███████╗\n" +
                                       " ██╔██╗ ██║  ██║██║  ██║██║   ██║╚════██║\n" +
                                       "██╔╝ ██╗██████╔╝██████╔╝╚██████╔╝███████║\n" +
-                                      "╚═╝  ╚═╝╚═════╝ ╚═════╝  ╚═════╝ ╚══════╝\n v7.1" +
+                                      "╚═╝  ╚═╝╚═════╝ ╚═════╝  ╚═════╝ ╚══════╝\n v7.2" +
                                       "\n" + RED_BOLD +
                                       "MADE BY: " + WHITE_BOLD + DISCORD_USERNAME +"\n" + WHITE_BOLD + "> " + PURPLE_BOLD +
                                       "DISCORD: " + GREEN_BOLD + "http://discord.io/XDDOS\n" + WHITE_BOLD + "> " + WHITE_BOLD +
