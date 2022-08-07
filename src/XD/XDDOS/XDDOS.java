@@ -80,6 +80,7 @@ public class XDDOS {
             nettyThreads = targetCPS == -1 ? 256 : (int) Math.ceil(6.4E-4D * (double) targetCPS);
             loopThreads = targetCPS == -1 ? 3 : (int) Math.ceil(1.999960000799984E-5D * (double) targetCPS);
             protocolLength = protcolID > 128 ? 3 : 2;
+            System.out.println("nettyThreads: " + nettyThreads+"\nloopThreads: " + loopThreads);
             Random r = new Random();
 
 

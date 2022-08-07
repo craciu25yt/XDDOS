@@ -35,7 +35,7 @@ import io.netty.buffer.ByteBuf;
         ByteBufOutputStream bbbb2 = new ByteBufOutputStream(b2);
         ByteBuf b3 = Unpooled.buffer();
         ByteBufOutputStream bbbb3 = new ByteBufOutputStream(b3);
-        channel.writeAndFlush(Unpooled.buffer().writeBytes((new LoginRequest(String.valueOf((new StringBuilder()).append(RandomUtils.randomString(5)).append("_XDDOS")))).getWrappedPacket()));
+        channel.writeAndFlush(Unpooled.buffer().writeBytes((new LoginRequest(String.valueOf((new StringBuilder()).append(RandomUtils.randomString(8)).append("_XD")))).getWrappedPacket()));
         channel.writeAndFlush(b);
         channel.writeAndFlush(bbbb);
         try {
@@ -64,7 +64,7 @@ import io.netty.buffer.ByteBuf;
         }
         try {
           for (int l = 0; l < 3; l++) {
-            writePacket(compress(PacketUtils.createChatPacket("-" + (new SecureRandom()).nextInt(9999) + "- TEAM XDDOS ON TOP! - discord . io / XDDOS -" + (new SecureRandom()).nextInt(9999) + "-"), 0), bbbb2);
+            writePacket(compress(PacketUtils.createChatPacket("-" + (new SecureRandom()).nextInt(9999) + "- TEAM XD ON TOP! - discord . gg / SEn4ycTXR8 -" + (new SecureRandom()).nextInt(9999) + "-"), 0), bbbb2);
           }
         }
         catch (IOException ioException) {
