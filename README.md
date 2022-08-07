@@ -30,9 +30,9 @@ java -jar XDDOS.jar
 
 - for manual startup:
 ```
-java -jar XDDOS.jar [ip] [protocol] [method] [time] [cps] [y/n] <proxyfilename>
+java -jar XDDOS.jar [ip] [protocol] [method] [time] [cps] [y/n]
 ```
-(y/n is optional y if you want to use auto proxy generator and n to use your own proxy) (IMPORTANT - if u are using n you need to specify your proxy filename or by default it will use proxies.txt)
+(y/n is optional y if you want to use auto proxy generator and n to use your own proxy) (IMPORTANT - if u are using n it will use proxies.txt as proxy file)
 
 ### example:  
 
