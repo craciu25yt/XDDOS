@@ -63,19 +63,30 @@ public class ProxyGen {
             System.out.println("Failed to parse from https://raw.githubusercontent.com/TheSpeedX/SOCKS-List/master/socks4.txt");
         }
         try {
-            Document proxyListf = Jsoup.connect("https://raw.githubusercontent.com/XDMEOW/SocksProxy/main/socks4(all).txt").get();
-            proxies.addAll(Arrays.stream(proxyListf.text().split(" ")).distinct().collect(Collectors.toList()));
-        } catch (IOException e) {
-            System.out.println("Failed to parse from https://raw.githubusercontent.com/XDMEOW/SocksProxy/main/socks4(all).txt");
-        }
-        try {
             Document proxyListf = Jsoup.connect("https://raw.githubusercontent.com/B4RC0DE-TM/proxy-list/main/SOCKS4.txt").get();
             proxies.addAll(Arrays.stream(proxyListf.text().split(" ")).distinct().collect(Collectors.toList()));
         } catch (IOException e) {
             System.out.println("Failed to parse from https://raw.githubusercontent.com/B4RC0DE-TM/proxy-list/main/SOCKS4.txt");
         }
+        try {
+            Document proxyListf = Jsoup.connect("https://raw.githubusercontent.com/jetkai/proxy-list/main/online-proxies/txt/proxies-socks4.txt").get();
+            proxies.addAll(Arrays.stream(proxyListf.text().split(" ")).distinct().collect(Collectors.toList()));
+        } catch (IOException e) {
+            System.out.println("Failed to parse from https://raw.githubusercontent.com/jetkai/proxy-list/main/online-proxies/txt/proxies-socks4.txt");
+        }
+        try {
+            Document proxyListf = Jsoup.connect("https://raw.githubusercontent.com/MuRongPIG/Proxy-Master/main/socks4.txt").get();
+            proxies.addAll(Arrays.stream(proxyListf.text().split(" ")).distinct().collect(Collectors.toList()));
+        } catch (IOException e) {
+            System.out.println("Failed to parse from https://raw.githubusercontent.com/MuRongPIG/Proxy-Master/main/socks4.txt");
+        }
+        try {
+            Document proxyListf = Jsoup.connect("https://raw.githubusercontent.com/officialputuid/KangProxy/main/socks4/socks4.txt").get();
+            proxies.addAll(Arrays.stream(proxyListf.text().split(" ")).distinct().collect(Collectors.toList()));
+        } catch (IOException e) {
+            System.out.println("Failed to parse from https://raw.githubusercontent.com/officialputuid/KangProxy/main/socks4/socks4.txt");
+        }
         proxies = new CopyOnWriteArrayList<>(new HashSet<>(proxies));
-
 
         try {
             this.proxyFile.createNewFile();
