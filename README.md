@@ -43,7 +43,7 @@ java -jar XDDOS.jar localhost:25565 47 botjoiner 10 10 y
 
 - To run botjoiner for 10 seconds with 10 cps and use your own proxy:
 ```
-java -jar XDDOS.jar localhost:25565 47 botjoiner 10 10 n proxy.txt
+java -jar XDDOS.jar localhost:25565 47 botjoiner 10 10 n
 ```
 
 - To run botjoiner for 10 seconds with MAX POWER or CPS and use auto proxy generator:
