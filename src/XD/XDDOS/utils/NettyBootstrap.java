@@ -191,7 +191,8 @@ public class NettyBootstrap {
                 attack.start();
             }
         }
-
+        System.out.println(WHITE_BOLD + "Wating for 5 sec...");
+        Thread.sleep(5000);
         Counter.start();
         latch.countDown();
         
