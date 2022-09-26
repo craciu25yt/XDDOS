@@ -1,5 +1,5 @@
 ![alt text](https://cdn.discordapp.com/attachments/949290845222350928/964583278789148763/cover.png)
-#                  XDDOS - https://discord.io/XDDOS
+#                  TEAMXD Discord - https://discord.gg/4DQnbEnv87
 
 ## XDDOS is a tool to stress test your minecraft server.
 
