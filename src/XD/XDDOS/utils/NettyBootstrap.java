@@ -24,14 +24,6 @@ import XD.XDDOS.methods.IMethod;
 import XD.XDDOS.utils.proxy.ProxyLoader;
 
 public class NettyBootstrap {
-
-    public static final String RED_BOLD = "\033[1;31m";    // RED
-    public static final String GREEN_BOLD = "\033[1;32m";  // GREEN
-    public static final String PURPLE_BOLD = "\033[1;35m"; // PURPLE
-    public static final String WHITE_BOLD = "\033[1;37m";  // WHITE
-    public static final String RESET = "\033[0m";
-    public static final String CYAN_BOLD = "\033[1;36m";   // CYAN_BOLD
-
     public static final EventLoopGroup loopGroup;
     public static final Class<? extends Channel> socketChannel;
     public static final IMethod method;
@@ -138,7 +130,7 @@ public class NettyBootstrap {
                     Thread.sleep(1000L);
                 } catch (InterruptedException var2) {
                 }
-                System.out.println(GREEN_BOLD+"["+RED_BOLD+"XDDOS"+GREEN_BOLD+"]"+WHITE_BOLD+" Current CPS: "+ GREEN_BOLD + integer +WHITE_BOLD+" Time Left: " + RED_BOLD +(XDDOS.duration-totalSeconds)+RESET);
+                System.out.println(XDDOS.GREEN_BOLD+"["+XDDOS.RED_BOLD+"XDDOS"+XDDOS.GREEN_BOLD+"]"+XDDOS.WHITE_BOLD+" Current CPS: "+ XDDOS.GREEN_BOLD + integer +XDDOS.WHITE_BOLD+" Time Left: " + XDDOS.RED_BOLD +(XDDOS.duration-totalSeconds)+XDDOS.RESET);
                 ++totalSeconds;
                 integer = 0;
                 triedCPS = 0;
@@ -191,7 +183,7 @@ public class NettyBootstrap {
                 attack.start();
             }
         }
-        System.out.println(WHITE_BOLD + "Wating for 5 sec...");
+        System.out.println(XDDOS.WHITE_BOLD + "Wating for 5 sec...");
         Thread.sleep(5000);
         Counter.start();
         latch.countDown();

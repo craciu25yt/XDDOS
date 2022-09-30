@@ -2,6 +2,7 @@ package XD.XDDOS;
 
 import java.io.File;
 import java.net.InetAddress;
+import java.util.Arrays;
 import java.util.Random;
 
 import XD.XDDOS.methods.IMethod;
@@ -33,15 +34,24 @@ public class XDDOS {
    public static final String DISCORD_USERNAME = "CatOnDrugs#1521";
    public static boolean attackRunning = false;
 
-   public static final String RED_BOLD = "\033[1;31m";    // RED
-   public static final String GREEN_BOLD = "\033[1;32m";  // GREEN
-   public static final String PURPLE_BOLD = "\033[1;35m"; // PURPLE
-   public static final String WHITE_BOLD = "\033[1;37m";  // WHITE
-   public static final String RESET = "\033[0m";
-   public static final String CYAN_BOLD = "\033[1;36m";   // CYAN_BOLD
+   public static String RED_BOLD = "\033[1;31m";    // RED
+   public static String GREEN_BOLD = "\033[1;32m";  // GREEN
+   public static String PURPLE_BOLD = "\033[1;35m"; // PURPLE
+   public static String WHITE_BOLD = "\033[1;37m";  // WHITE
+   public static String RESET = "\033[0m";
+   public static String CYAN_BOLD = "\033[1;36m";   // CYAN_BOLD
 
    public static void main(String[] args) throws Throwable {
       System.setProperty("file.encoding", "UTF-8");
+      if(Arrays.toString(args).contains("-noansi"))
+      {
+         RED_BOLD = "";
+         GREEN_BOLD = "";
+         PURPLE_BOLD = "";
+         WHITE_BOLD = "";
+         RESET = "";
+         CYAN_BOLD = "";
+      }
       System.out.println();
       System.out.println();
       System.out.println(WHITE_BOLD + "██╗  ██╗██████╗ ██████╗  ██████╗ ███████╗\n" +
@@ -57,7 +67,7 @@ public class XDDOS {
                                       "\n" + GREEN_BOLD +
                                       "STARTING\n" + RESET );
 
-      if(args.length != 6){
+      if(args.length < 6){
          ArgsHelper.UserFrndly(args);
       }
       else{
