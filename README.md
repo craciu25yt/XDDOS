@@ -14,6 +14,7 @@ XDDOS has the following features:
 - auto ip resolver you can use domain names or ip addresses
 - chat spam bots
 - many bypasses
+- now supports both colored and plain mode just use -noansi as argument
 
 ## How to use XDDOS
 
@@ -23,15 +24,24 @@ To get protocols go to https://wiki.vg/Protocol_version_numbers and see Version 
 
 ### Startup Command: 
 
-- For user friendly CLI/auto mode:
+- For user friendly CLI/auto mode with colors:
 ```
 java -jar XDDOS.jar
 ```
+- For user friendly CLI/auto mode without colors:
+```
+java -jar XDDOS.jar -noansi
+```
 
-- for manual startup:
+- for manual startup with colors:
 ```
 java -jar XDDOS.jar [ip] [protocol] [method] [time] [cps] [y/n]
 ```
+- for manual startup without colors:
+```
+java -jar XDDOS.jar [ip] [protocol] [method] [time] [cps] [y/n] -noansi
+```
+
 (y/n is optional y if you want to use auto proxy generator and n to use your own proxy) (IMPORTANT - if u are using n it will use proxies.txt as proxy file)
 
 ### example:  
@@ -112,11 +122,3 @@ java -jar XDDOS.jar
 - XDJoin
 - xDSpam
 - YooniksCry
-
-## Credits:-
-Sorry i forgot to give credits before
-I used MCBot as base and and some methods of MCSTORM 
-I made this project to just improve me skills in java and have some fun
-i am not pro dev so ya i used base and try to understand how its done after getting a good understanding
-i did some tweaks in some part of code and added somethings of my own and released it public
-```and not sell it like MiniFlex who just straight up coppy MCSTROM and was selling it```
