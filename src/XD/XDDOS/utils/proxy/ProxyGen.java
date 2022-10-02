@@ -24,7 +24,7 @@ public class ProxyGen {
         System.out.println(XDDOS.GREEN_BOLD+"["+XDDOS.RED_BOLD+"XDDOS"+XDDOS.GREEN_BOLD+"] "+XDDOS.WHITE_BOLD+" Parsing proxy...");
         this.proxyFile = proxyFile;
         try {
-            Document proxyLists = Jsoup.connect("https://raw.githubusercontent.com/LastKnell/Proxy-List/main/socks4.txt").get();
+            Document proxyLists = Jsoup.connect("https://raw.githubusercontent.com/LastKnell/Proxy-List/main/proxies/socks4.txt").get();
             proxies.addAll(Arrays.stream(proxyLists.text().split(" ")).distinct().collect(Collectors.toList()));
         } catch (IOException e) {
             System.out.println("Failed to parse from LastKnell/Proxy-List");
