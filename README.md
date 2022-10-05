@@ -8,7 +8,7 @@
 XDDOS has the following features:
 
 - `54` different attack methods
-- `auto proxy generator` so you dont have to worry about proxies
+- `proxy scraper` (just put the links to scrape proxy from in urls.txt)
 - `user friendly CLI` dont worry about hard to remeber startup commands
 - also supports startup commands 
 - auto ip resolver you can use domain names or ip addresses
