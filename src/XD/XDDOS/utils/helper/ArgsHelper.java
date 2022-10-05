@@ -77,6 +77,7 @@ public class ArgsHelper {
                    "[02]" + XDDOS.CYAN_BOLD + " UUIDCrash\n" + XDDOS.WHITE_BOLD +
                    "[03]" + XDDOS.CYAN_BOLD + " BungeeDowner\n" + XDDOS.WHITE_BOLD +
                    "[04]" + XDDOS.CYAN_BOLD + " BotRaid\n" + XDDOS.WHITE_BOLD +
+                   "[05]" + XDDOS.CYAN_BOLD + " TCPFlow\n" + XDDOS.WHITE_BOLD +
                     "\n" +
                    XDDOS.WHITE_BOLD + "[" + XDDOS.RED_BOLD + "INFO" + XDDOS.WHITE_BOLD +"] Default Method is \"NettyDowner\" and type full name of the Methods don't be LAZY\n"+XDDOS.WHITE_BOLD+"\n"+
                    "TYPE NAME OF METHOD:" + XDDOS.GREEN_BOLD +

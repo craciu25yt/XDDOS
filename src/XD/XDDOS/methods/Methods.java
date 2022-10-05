@@ -45,6 +45,7 @@ import XD.XDDOS.methods.impl.ServerFucker;
 import XD.XDDOS.methods.impl.Slapper;
 import XD.XDDOS.methods.impl.SmartBot;
 import XD.XDDOS.methods.impl.TCPBYPASS;
+import XD.XDDOS.methods.impl.TCPFlow;
 import XD.XDDOS.methods.impl.TCPHIT;
 import XD.XDDOS.methods.impl.UUIDCrash;
 import XD.XDDOS.methods.impl.UltimateKiller;
@@ -132,6 +133,7 @@ public class Methods {
       registerMethod("uuidcrash", (IMethod)new UUIDCrash());
       registerMethod("bungeedowner", (IMethod)new BungeeDowner());
       registerMethod("beta", (IMethod)new Beta());
+      registerMethod("tcpflow", (IMethod)new TCPFlow());
    }
 
    public static IMethod getMethod(String methodID) {
