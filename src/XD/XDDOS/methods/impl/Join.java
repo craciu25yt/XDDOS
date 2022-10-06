@@ -9,7 +9,6 @@ import XD.XDDOS.utils.packet.LoginRequest;
 import XD.XDDOS.utils.proxy.ProxyLoader;
 import io.netty.buffer.Unpooled;
 import io.netty.channel.Channel;
-import java.util.Random;
 
 public class Join
   implements IMethod {

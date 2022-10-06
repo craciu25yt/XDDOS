@@ -6,8 +6,6 @@ import XD.XDDOS.utils.NettyBootstrap;
 import XD.XDDOS.utils.packet.Handshake;
 import XD.XDDOS.utils.packet.PingPacket;
 import XD.XDDOS.utils.proxy.ProxyLoader;
-import io.netty.buffer.ByteBuf;
-import io.netty.buffer.ByteBufOutputStream;
 import io.netty.buffer.Unpooled;
 import io.netty.channel.Channel;
 

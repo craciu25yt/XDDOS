@@ -116,7 +116,7 @@ public class NettyBootstrap {
     }
 
     public static void start() throws Throwable {
-        ResourceLeakDetector.setLevel(ResourceLeakDetector.Level.ADVANCED);
+        ResourceLeakDetector.setLevel(ResourceLeakDetector.Level.SIMPLE);
         InetAddress ip = XDDOS.resolved;
         int port = XDDOS.port;
 
