@@ -18,7 +18,7 @@ public class ArgsHelper {
            System.out.print("You server <IP:PORT>:\n"+XDDOS.GREEN_BOLD+">> "+XDDOS.WHITE_BOLD);
            XDDOS.serverhp = in.nextLine();
 
-           System.out.print("Server protocol (open -> https://wiki.vg/Protocol_version_numbers):\n"+XDDOS.GREEN_BOLD+">> "+XDDOS.WHITE_BOLD);
+           System.out.print("Server protocol (https://wiki.vg/Protocol_version_numbers):\n"+XDDOS.GREEN_BOLD+">> "+XDDOS.WHITE_BOLD);
            XDDOS.protcolID = Integer.parseInt(in.nextLine());
 
            System.out.print("["+XDDOS.RED_BOLD+"Methods"+XDDOS.WHITE_BOLD+"]"+"\n\n"+XDDOS.WHITE_BOLD+
