@@ -112,7 +112,7 @@ public class NettyBootstrap {
                 ctx.close();
             }
         };
-        bootstrap = (Bootstrap)((Bootstrap)((Bootstrap)((Bootstrap)((Bootstrap)(new Bootstrap()).channel(socketChannel)).group(loopGroup)).option(ChannelOption.TCP_NODELAY, true)).option(ChannelOption.AUTO_READ, false)).handler(handler);
+        bootstrap = new Bootstrap().channel(socketChannel).group(loopGroup).option(ChannelOption.TCP_NODELAY, true).option(ChannelOption.AUTO_READ, false).handler(handler);
     }
 
     public static void start() throws Throwable {
@@ -130,7 +130,8 @@ public class NettyBootstrap {
                     Thread.sleep(1000L);
                 } catch (InterruptedException var2) {
                 }
-                System.out.println(XDDOS.GREEN_BOLD+"["+XDDOS.RED_BOLD+"XDDOS"+XDDOS.GREEN_BOLD+"]"+XDDOS.WHITE_BOLD+" Current CPS: "+ XDDOS.GREEN_BOLD + integer +XDDOS.WHITE_BOLD+" Time Left: " + XDDOS.RED_BOLD +(XDDOS.duration-totalSeconds)+XDDOS.RESET);
+                System.out.print("\r");
+                System.out.print(XDDOS.GREEN_BOLD+"["+XDDOS.RED_BOLD+"XDDOS"+XDDOS.GREEN_BOLD+"]"+XDDOS.WHITE_BOLD+" Current CPS: "+ XDDOS.GREEN_BOLD + integer +XDDOS.WHITE_BOLD+" Time Left: " + XDDOS.RED_BOLD +(XDDOS.duration-totalSeconds)+" sec"+XDDOS.RESET+"                                ");
                 ++totalSeconds;
                 integer = 0;
                 triedCPS = 0;
@@ -183,10 +184,7 @@ public class NettyBootstrap {
                 attack.start();
             }
         }
-        System.out.println(XDDOS.WHITE_BOLD + "Wating for 5 sec...");
-        Thread.sleep(5000);
         Counter.start();
-        latch.countDown();
-        
+        latch.countDown(); 
     }
 }

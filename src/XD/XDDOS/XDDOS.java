@@ -92,8 +92,6 @@ public class XDDOS {
             protocolLength = protcolID > 128 ? 3 : 2;
             System.out.println("nettyThreads: " + nettyThreads+"\nloopThreads: " + loopThreads);
             Random r = new Random();
-
-
             for (int i = 1; i < 65536; ++i) string = string + (char) (r.nextInt(125) + 1);
 
          } catch (Exception var4) {
