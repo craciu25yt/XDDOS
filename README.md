@@ -13,7 +13,7 @@ XDDOS has the following features:
 - also supports startup commands 
 - auto ip resolver you can use domain names or ip addresses
 - chat spam bots
-- many bypasses
+- beautiful cli
 - now supports both colored and plain mode just use -noansi as argument
 
 ## How to use XDDOS
