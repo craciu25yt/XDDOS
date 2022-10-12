@@ -17,6 +17,9 @@ XDDOS has the following features:
 - now supports both colored and plain mode just use -noansi as argument
 
 ## How to use XDDOS
+Make a folder to store xddos and its files
+then make file called urls.txt and put all the links to scrape for socks4 proxies in it (the url must return raw proxies and should be plain text)
+then put xddos.jar there then run it using commands shown below
 
 CPS is Connection per second. Use -1 as cps to use max power
 
