@@ -27,8 +27,12 @@ public class BotJoiner
   }
 
   public void accept(Channel channel, ProxyLoader.Proxy proxy) {
+    String name = randomName();
+    if(name.length() > 15) {
+      name = name.substring(0,10);
+    }
     channel.writeAndFlush(Unpooled.buffer().writeBytes(this.bytes));
-    channel.writeAndFlush(Unpooled.buffer().writeBytes((new LoginRequest(randomName())).getWrappedPacket()));
+    channel.writeAndFlush(Unpooled.buffer().writeBytes((new LoginRequest(name)).getWrappedPacket()));
     NettyBootstrap.integer++;
     NettyBootstrap.totalConnections++;
   }
