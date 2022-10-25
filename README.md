@@ -21,7 +21,8 @@ Make a folder to store xddos and its files
 then make file called urls.txt and put all the links to scrape socks4 proxies from in it (the url must return raw proxies and should be plain text)
 then put xddos.jar there then run it using commands shown below
 
-Some links
+### Some links to scrape socks4 proxies from
+
 ```
 https://raw.githubusercontent.com/TheSpeedX/PROXY-List/master/socks4.txt
 https://raw.githubusercontent.com/ShiftyTR/Proxy-List/master/socks4.txt
