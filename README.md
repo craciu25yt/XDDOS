@@ -18,8 +18,16 @@ XDDOS has the following features:
 
 ## How to use XDDOS
 Make a folder to store xddos and its files
-then make file called urls.txt and put all the links to scrape for socks4 proxies in it (the url must return raw proxies and should be plain text)
+then make file called urls.txt and put all the links to scrape socks4 proxies from in it (the url must return raw proxies and should be plain text)
 then put xddos.jar there then run it using commands shown below
+
+Some links
+```
+https://raw.githubusercontent.com/TheSpeedX/PROXY-List/master/socks4.txt
+https://raw.githubusercontent.com/ShiftyTR/Proxy-List/master/socks4.txt
+https://raw.githubusercontent.com/monosans/proxy-list/main/proxies/socks4.txt
+https://raw.githubusercontent.com/jetkai/proxy-list/main/online-proxies/txt/proxies-socks4.txt
+```
 
 CPS is Connection per second. Use -1 as cps to use max power
 
