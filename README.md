@@ -25,7 +25,7 @@ XDDOS has the following features:
 - To get protocols go [here](https://wiki.vg/Protocol_version_numbers) and see Version number
  example for version 1.8.9 protocol is 47
 
-Steps:
+### Steps to take to run XDDOS:
  1) Download the jar -> [Download](https://github.com/LastKnell/XDDOS/raw/master/XDDOS.jar)
  2) make a folder to store XDDOS and files related to it and move jar into that folder
  3) now make a file called urls.txt in that folder
