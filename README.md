@@ -17,13 +17,29 @@ XDDOS has the following features:
 - now supports both colored and plain mode just use -noansi as argument
 
 ## How to use XDDOS
-Make a folder to store xddos and its files
-then make file called urls.txt and put all the links to scrape for socks4 proxies in it (the url must return raw proxies and should be plain text)
-then put xddos.jar there then run it using commands shown below
+
+### Things to know
 
 CPS is Connection per second. Use -1 as cps to use max power
 
-To get protocols go to https://wiki.vg/Protocol_version_numbers and see Version number
+To get protocols go [here](https://wiki.vg/Protocol_version_numbers) and see Version number
+ example for version 1.8.9 protocol is 47
+
+Steps:
+ 1) Download the jar -> [Download](https://github.com/LastKnell/XDDOS/raw/master/XDDOS.jar)
+ 2) make a folder to store XDDOS and files related to it and move jar into that folder
+ 3) now make a file called urls.txt in that folder
+ 4) put the links to scrape socks4 proxies from in that file
+   ### Some links to scrape socks4 proxies from
+  ```
+  https://raw.githubusercontent.com/TheSpeedX/PROXY-List/master/socks4.txt
+  https://raw.githubusercontent.com/ShiftyTR/Proxy-List/master/socks4.txt
+  https://raw.githubusercontent.com/monosans/proxy-list/main/proxies/socks4.txt
+  https://raw.githubusercontent.com/jetkai/proxy-list/main/online-proxies/txt/proxies-socks4.txt
+  ```
+  
+ 5) now open ur terminal and move to that directory 
+ 6) now use the command to run jar commands can be found below
 
 ### Startup Command: 
 
@@ -45,18 +61,21 @@ java -jar XDDOS.jar [ip] [protocol] [method] [time] [cps] [y/n]
 java -jar XDDOS.jar [ip] [protocol] [method] [time] [cps] [y/n] -noansi
 ```
 
-(y/n is optional y if you want to use auto proxy generator and n to use your own proxy) (IMPORTANT - if u are using n it will use proxies.txt as proxy file)
+#### NOTE! :-
+**y/n** is optional y if you want to scrape proxy from links in urls.txt and **n** to use your own proxy) 
+#### IMPORTANT :-
+if u are using **n** it will use proxies.txt as proxy file
 
 ### example:  
 
-- To run botjoiner for 10 seconds with 10 cps and use auto proxy generator:
+- To run botjoiner for 10 seconds with 1000 cps and use auto proxy generator:
 ```
-java -jar XDDOS.jar localhost:25565 47 botjoiner 10 10 y
+java -jar XDDOS.jar localhost:25565 47 botjoiner 10 1000 y
 ```
 
-- To run botjoiner for 10 seconds with 10 cps and use your own proxy:
+- To run botjoiner for 10 seconds with 1000 cps and use your own proxy:
 ```
-java -jar XDDOS.jar localhost:25565 47 botjoiner 10 10 n
+java -jar XDDOS.jar localhost:25565 47 botjoiner 10 1000 n
 ```
 
 - To run botjoiner for 10 seconds with MAX POWER or CPS and use auto proxy generator:
