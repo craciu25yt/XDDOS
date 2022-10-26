@@ -61,7 +61,10 @@ java -jar XDDOS.jar [ip] [protocol] [method] [time] [cps] [y/n]
 java -jar XDDOS.jar [ip] [protocol] [method] [time] [cps] [y/n] -noansi
 ```
 
-(y/n is optional y if you want to use auto proxy generator and n to use your own proxy) (IMPORTANT - if u are using n it will use proxies.txt as proxy file)
+#### NOTE! :-
+**y/n** is optional y if you want to scrape proxy from links in urls.txt and **n** to use your own proxy) 
+#### IMPORTANT :-
+if u are using **n** it will use proxies.txt as proxy file
 
 ### example:  
 
