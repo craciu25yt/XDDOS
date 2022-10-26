@@ -18,7 +18,7 @@ XDDOS has the following features:
 
 ## How to use XDDOS
 
-### Download(https://github.com/LastKnell/XDDOS/raw/master/XDDOS.jar)
+### [Download](https://github.com/LastKnell/XDDOS/raw/master/XDDOS.jar)
 Make a folder to store xddos and its files
 then make file called urls.txt and put all the links to scrape socks4 proxies from in it (the url must return raw proxies and should be plain text)
 then put xddos.jar there then run it using commands shown below
