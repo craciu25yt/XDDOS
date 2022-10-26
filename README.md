@@ -22,6 +22,8 @@ XDDOS has the following features:
 
 CPS is Connection per second. Use -1 as cps to use max power
 
+Jar is compiled used java 17 so use java 17 to run
+
 To get protocols go [here](https://wiki.vg/Protocol_version_numbers) and see Version number
  example for version 1.8.9 protocol is 47
 
