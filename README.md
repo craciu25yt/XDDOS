@@ -65,14 +65,14 @@ java -jar XDDOS.jar [ip] [protocol] [method] [time] [cps] [y/n] -noansi
 
 ### example:  
 
-- To run botjoiner for 10 seconds with 10 cps and use auto proxy generator:
+- To run botjoiner for 10 seconds with 1000 cps and use auto proxy generator:
 ```
-java -jar XDDOS.jar localhost:25565 47 botjoiner 10 10 y
+java -jar XDDOS.jar localhost:25565 47 botjoiner 10 1000 y
 ```
 
-- To run botjoiner for 10 seconds with 10 cps and use your own proxy:
+- To run botjoiner for 10 seconds with 1000 cps and use your own proxy:
 ```
-java -jar XDDOS.jar localhost:25565 47 botjoiner 10 10 n
+java -jar XDDOS.jar localhost:25565 47 botjoiner 10 1000 n
 ```
 
 - To run botjoiner for 10 seconds with MAX POWER or CPS and use auto proxy generator:
