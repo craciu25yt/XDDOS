@@ -66,7 +66,7 @@ java -jar XDDOS.jar [ip] [protocol] [method] [time] [cps] [y/n] -noansi
 #### IMPORTANT :-
 if u are using **n** it will use proxies.txt as proxy file
 
-### example:  
+## Example Attack Commands  
 
 - To run botjoiner for 10 seconds with 1000 cps and use auto proxy generator:
 ```
