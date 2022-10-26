@@ -62,7 +62,7 @@ public class XDDOS {
                                       "╚═╝  ╚═╝╚═════╝ ╚═════╝  ╚═════╝ ╚══════╝\n v7.2" +
                                       "\n" + RED_BOLD +
                                       "MADE BY: " + WHITE_BOLD + DISCORD_USERNAME +"\n" + WHITE_BOLD + "> " + PURPLE_BOLD +
-                                      "DISCORD: " + GREEN_BOLD + "http://discord.io/XDDOS\n" + WHITE_BOLD + "> " + WHITE_BOLD +
+                                      "DISCORD: " + GREEN_BOLD + "https://dsc.gg/TEAMXD\n" + WHITE_BOLD + "> " + WHITE_BOLD +
                                       "Starting XDDOS :-\n" + RESET +
                                       "\n" + GREEN_BOLD +
                                       "STARTING\n" + RESET );
