@@ -3,7 +3,6 @@ package XD.XDDOS.methods.impl;
 import XD.XDDOS.XDDOS;
 import XD.XDDOS.methods.IMethod;
 import XD.XDDOS.utils.NettyBootstrap;
-import XD.XDDOS.utils.helper.RandomUtils;
 import XD.XDDOS.utils.packet.Handshake;
 import XD.XDDOS.utils.packet.LoginRequest;
 import XD.XDDOS.utils.proxy.ProxyLoader;

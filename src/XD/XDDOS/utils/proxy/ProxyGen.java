@@ -28,7 +28,8 @@ public class ProxyGen {
         File urls = new File("urls.txt");
         if(urls.exists()){
             try {
-                Files.readAllLines(Path.of(urls.toURI())).stream().forEach( (link) -> {
+                Path p = urls.toPath();
+                Files.readAllLines(p).stream().forEach( (link) -> {
                     try {
                         Document scrapedproxies = Jsoup.connect(link).get();
                         proxies.addAll(Arrays.stream(scrapedproxies.text().split(" ")).distinct().collect(Collectors.toList()));

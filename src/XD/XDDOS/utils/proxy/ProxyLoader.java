@@ -20,7 +20,7 @@ import XD.XDDOS.utils.NettyBootstrap;
 public class ProxyLoader {
    private File file;
    private BufferedReader bufferedReader;
-   public volatile List<ProxyLoader.Proxy> finals = Collections.synchronizedList(new ArrayList());
+   public volatile List<ProxyLoader.Proxy> finals = Collections.synchronizedList(new ArrayList<Proxy>());
    public ExecutorService exe = Executors.newFixedThreadPool(50, new ThreadFactory() {
       public Thread newThread(Runnable r) {
          return new Thread(r);
@@ -44,7 +44,7 @@ public class ProxyLoader {
    private void loadFile() {
       try {
          List<String> lines = Files.readAllLines(this.file.toPath());
-         Iterator var3 = lines.iterator();
+         Iterator<String> var3 = lines.iterator();
 
          while(var3.hasNext()) {
             String s = (String)var3.next();
