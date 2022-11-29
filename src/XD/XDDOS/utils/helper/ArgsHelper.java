@@ -13,8 +13,10 @@ public class ArgsHelper {
 
         Scanner in = new Scanner(System.in);
         System.out.print("Do you want to update XDDOS[Y/n]:\n" + XDDOS.GREEN_BOLD + ">> " + XDDOS.RESET);
-        if(in.nextLine().trim().toLowerCase() == "y") {
+        String yn = in.nextLine().trim().toLowerCase();
+        if(yn == "y") {
             Update.updateJAR();
+            in.close();
         }
         System.out.print("You server <IP:PORT>:\n" + XDDOS.GREEN_BOLD + ">> " + XDDOS.WHITE_BOLD);
         XDDOS.serverhp = in.nextLine();
