@@ -14,7 +14,7 @@ public class Update {
         System.out.println(XDDOS.GREEN_BOLD+"Downloading file from GitHub");
         try {
            InputStream inputstream = new URL(link).openStream();
-           Files.copy(inputstream, Paths.get("./", "XDDOS.jar"), StandardCopyOption.REPLACE_EXISTING);
+           Files.copy(inputstream, Paths.get("XDDOS.jar"), StandardCopyOption.REPLACE_EXISTING);
         } catch (Exception e) {
             e.printStackTrace();
         }
