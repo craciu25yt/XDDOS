@@ -12,8 +12,8 @@ public class ArgsHelper {
     public static void UserFrndly(String[] args) throws Throwable {
 
         Scanner in = new Scanner(System.in);
-        System.out.print("Do you want to update XDDOS[Y/n]:\n" + XDDOS.GREEN_BOLD + ">> " + XDDOS.WHITE_BOLD);
-        if(in.nextLine().toLowerCase() == "y") {
+        System.out.print("Do you want to update XDDOS[Y/n]:\n" + XDDOS.GREEN_BOLD + ">> " + XDDOS.RESET);
+        if(in.nextLine().trim().toLowerCase() == "y") {
             Update.updateJAR();
         }
         System.out.print("You server <IP:PORT>:\n" + XDDOS.GREEN_BOLD + ">> " + XDDOS.WHITE_BOLD);
