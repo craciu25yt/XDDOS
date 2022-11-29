@@ -12,10 +12,14 @@ public class LoginRequest extends DefinedPacket {
 
    public void write(ByteBuf buf) {
       DefinedPacket.writeString(this.data, buf);
+      buf.writeBoolean(false);
+      buf.writeBoolean(false);
    }
 
    public void writeC(ByteBuf buf) {
       DefinedPacket.writeStringC(this.data, buf);
+      buf.writeBoolean(false);
+      buf.writeBoolean(false);
    }
 
    public byte[] getWrappedPacket() {
