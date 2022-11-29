@@ -43,7 +43,9 @@ XDDOS has the following features:
  6) now use the command to run jar commands can be found below
 
 ### Update Command:
-```java -jar XDDOS.jar -update```
+```
+java -jar XDDOS.jar -update
+```
 
 ### Startup Command: 
 
