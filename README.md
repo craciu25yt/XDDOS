@@ -8,6 +8,7 @@
 XDDOS has the following features:
 
 - `54` different attack methods
+- supports all version 
 - `proxy scraper` (just put the links to scrape proxy from in urls.txt)
 - `user friendly CLI` dont worry about hard to remeber startup commands
 - also supports startup commands 
