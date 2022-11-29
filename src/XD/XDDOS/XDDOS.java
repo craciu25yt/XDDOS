@@ -65,7 +65,7 @@ public class XDDOS {
                                       "\n" + RED_BOLD +
                                       "MADE BY: " + WHITE_BOLD + DISCORD_USERNAME +"\n" + WHITE_BOLD + "> " + PURPLE_BOLD +
                                       "DISCORD: " + GREEN_BOLD + "https://dsc.gg/TEAMXD\n" + WHITE_BOLD + "> " + WHITE_BOLD +
-                                      "GitHub: " +RED_BOLD + "https://github.com/AnAverageBeing/XDDOS" + WHITE_BOLD +
+                                      "GitHub: " +RED_BOLD + "https://github.com/AnAverageBeing/XDDOS\n" + WHITE_BOLD +
                                       "Starting XDDOS :-\n" + RESET +
                                       "\n" + GREEN_BOLD +
                                       "STARTING\n" + RESET );
