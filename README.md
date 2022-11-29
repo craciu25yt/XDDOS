@@ -15,13 +15,14 @@ XDDOS has the following features:
 - chat spam bots
 - beautiful cli
 - now supports both colored and plain mode just use -noansi as argument
+- inbuilt jar updater
 
 ## How to use XDDOS
 
 ### Things to know
 
 - CPS is Connection per second. Use -1 as cps to use max power
-- Jar is compiled used java 17 so use java 17 to run
+- Jar is compiled used java 8 so use java 8 or above to run
 - To get protocols go [here](https://wiki.vg/Protocol_version_numbers) and see Version number
  example for version 1.8.9 protocol is 47
 
@@ -40,6 +41,9 @@ XDDOS has the following features:
   
  5) now open ur terminal and move to that directory 
  6) now use the command to run jar commands can be found below
+
+### Update Command:
+```java -jar XDDOS.jar -update```
 
 ### Startup Command: 
 

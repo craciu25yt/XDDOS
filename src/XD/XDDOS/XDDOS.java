@@ -10,6 +10,7 @@ import XD.XDDOS.methods.Methods;
 import XD.XDDOS.utils.NettyBootstrap;
 import XD.XDDOS.utils.helper.ArgsHelper;
 import XD.XDDOS.utils.helper.ServerAddress;
+import XD.XDDOS.utils.helper.Update;
 import XD.XDDOS.utils.proxy.ProxyLoader;
 
 public class XDDOS {
@@ -67,6 +68,11 @@ public class XDDOS {
                                       "\n" + GREEN_BOLD +
                                       "STARTING\n" + RESET );
 
+      if(args.length == 1) {
+         args[0] = "-update";
+         Update.updateJAR();
+      }
+      
       if(args.length < 6){
          ArgsHelper.UserFrndly(args);
       }
