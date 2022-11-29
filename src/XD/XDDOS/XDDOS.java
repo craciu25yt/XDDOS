@@ -41,6 +41,7 @@ public class XDDOS {
    public static String WHITE_BOLD = "\033[1;37m";  // WHITE
    public static String RESET = "\033[0m";
    public static String CYAN_BOLD = "\033[1;36m";   // CYAN_BOLD
+   public static boolean x = false;
 
    public static void main(String[] args) throws Throwable {
       System.setProperty("file.encoding", "UTF-8");
@@ -85,6 +86,7 @@ public class XDDOS {
       if (!attackRunning) {
          attackRunning = true;
          try {
+            if(XDDOS.protcolID > 758) x = true;
             System.out.println(GREEN_BOLD+"["+RED_BOLD+"XDDOS"+GREEN_BOLD+"]"+WHITE_BOLD+" Resolving Target IP...");
             ServerAddress sa = ServerAddress.getAddrss(serverhp);
             srvRecord = sa.getIP();

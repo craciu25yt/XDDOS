@@ -12,25 +12,25 @@ public class LoginRequest extends DefinedPacket {
 
    public void write(ByteBuf buf) {
       DefinedPacket.writeString(this.data, buf);
-      buf.writeBoolean(false);
-      buf.writeBoolean(false);
    }
 
    public void writeC(ByteBuf buf) {
       DefinedPacket.writeStringC(this.data, buf);
-      buf.writeBoolean(false);
-      buf.writeBoolean(false);
    }
 
    public byte[] getWrappedPacket() {
       ByteBuf allocated = Unpooled.buffer();
       allocated.writeByte(0);
       this.write(allocated);
+      if (XD.XDDOS.XDDOS.x) {
+         allocated.writeBoolean(false);
+         allocated.writeBoolean(false);
+      }
       ByteBuf wrapped = Unpooled.buffer();
       DefinedPacket.writeVarInt(allocated.readableBytes(), wrapped);
       wrapped.writeBytes(allocated);
       byte[] bytes = new byte[wrapped.readableBytes()];
-      wrapped.getBytes(0, (byte[])bytes);
+      wrapped.getBytes(0, (byte[]) bytes);
       wrapped.release();
       return bytes;
    }
@@ -39,11 +39,15 @@ public class LoginRequest extends DefinedPacket {
       ByteBuf allocated = Unpooled.buffer();
       allocated.writeByte(0);
       this.writeC(allocated);
+      if (XD.XDDOS.XDDOS.x) {
+         allocated.writeBoolean(false);
+         allocated.writeBoolean(false);
+      }
       ByteBuf wrapped = Unpooled.buffer();
       DefinedPacket.writeVarInt(allocated.readableBytes(), wrapped);
       wrapped.writeBytes(allocated);
       byte[] bytes = new byte[wrapped.readableBytes()];
-      wrapped.getBytes(0, (byte[])bytes);
+      wrapped.getBytes(0, (byte[]) bytes);
       wrapped.release();
       return bytes;
    }
