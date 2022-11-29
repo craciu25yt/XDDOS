@@ -144,3 +144,6 @@ java -jar XDDOS.jar
 - XDJoin
 - xDSpam
 - YooniksCry
+
+### VirusTotal Scan
+https://www.virustotal.com/gui/file/fa3c335a366da31b825b06281dbad74bd590bd12acb53d6dc644c699d591cf2b
