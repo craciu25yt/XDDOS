@@ -1,38 +1,35 @@
 ![alt text](https://cdn.discordapp.com/attachments/949290845222350928/964583278789148763/cover.png)
-#                  TEAMXD Discord - https://discord.gg/4DQnbEnv87
+# XDDOS, an advanced minecraft server stresser
 
-## XDDOS is a tool to stress test your minecraft server.
+XDDOS is an advanced tool for attacking and testing your server against bots that is made from [MCStorm](https://github.com/llyxa05/MCSTORM-Crack).
 
 ## Features avilable
 
 XDDOS has the following features:
 
 - `54` different attack methods
-- supports all version 
+- Supports all versions 
 - `proxy scraper` (just put the links to scrape proxy from in urls.txt)
 - `user friendly CLI` dont worry about hard to remeber startup commands
-- also supports startup commands 
-- auto ip resolver you can use domain names or ip addresses
-- chat spam bots
-- beautiful cli
-- now supports both colored and plain mode just use -noansi as argument
-- inbuilt jar updater
+- Startup commands 
+- Auto ip resolver. That means that you can use the server IP or the domain
+- Ansi Colours supported
+- Inbuilt auto updater
 
 ## How to use XDDOS
 
 ### Things to know
 
-- CPS is Connection per second. Use -1 as cps to use max power
-- Jar is compiled used java 8 so use java 8 or above to run
-- To get protocols go [here](https://wiki.vg/Protocol_version_numbers) and see Version number
- example for version 1.8.9 protocol is 47
+- CPS is the Connection per second. If you want to use the max power use `-1` as cps limit
+- Jar is compiled used java 8. That means that you an use java 8 or above to run XDDOS
+- To get versions protocols go [here](https://wiki.vg/Protocol_version_numbers)
 
 ### Steps to take to run XDDOS:
  1) Download the jar -> [Download](https://github.com/AnAverageBeing/XDDOS/raw/master/XDDOS.jar)
- 2) make a folder to store XDDOS and files related to it and move jar into that folder
- 3) now make a file called urls.txt in that folder
- 4) put the links to scrape socks4 proxies from in that file
-   ### Some links to scrape socks4 proxies from
+ 2) Create a folder to store XDDOS
+ 3) Now make a file called urls.txt in that folder
+ 4) Put the links to scrape socks4 proxies from in that file
+   ### If you don't have, here's some socks4 links to scrape
   ```
   https://raw.githubusercontent.com/TheSpeedX/PROXY-List/master/socks4.txt
   https://raw.githubusercontent.com/ShiftyTR/Proxy-List/master/socks4.txt
@@ -40,8 +37,8 @@ XDDOS has the following features:
   https://raw.githubusercontent.com/jetkai/proxy-list/main/online-proxies/txt/proxies-socks4.txt
   ```
   
- 5) now open ur terminal and move to that directory 
- 6) now use the command to run jar commands can be found below
+ 5) Now open your terminal and go to the directory (Trick, you can write in the folder patch `cmd` and the terminal will open in that folder)
+ 6) Now use one of the commands below for starting
 
 ### Update Command:
 ```
@@ -69,9 +66,7 @@ java -jar XDDOS.jar [ip] [protocol] [method] [time] [cps] [y/n] -noansi
 ```
 
 #### NOTE! :-
-**y/n** is optional y if you want to scrape proxy from links in urls.txt and **n** to use your own proxy) 
-#### IMPORTANT :-
-if u are using **n** it will use proxies.txt as proxy file
+**y/n** is optional. Use `y` if you want to scrape proxy from links in urls.txt and **n** to use your own proxies from proxies.txt 
 
 ## Example Attack Commands  
 
@@ -90,13 +85,10 @@ java -jar XDDOS.jar localhost:25565 47 botjoiner 10 1000 n
 java -jar XDDOS.jar localhost:25565 47 botjoiner 10 -1 y
 ```
 
-- To use user friendly CLI:
-```
-java -jar XDDOS.jar
-```
 
 ## Methods avilable
 
+- Aegis
 - BigHandshake
 - BigPacket
 - BotJoiner
@@ -124,10 +116,10 @@ java -jar XDDOS.jar
 - LongNames
 - Memory
 - MOTD
-- nabCry
+- NabCry
 - NettyDowner
 - Network
-- NullPing 2.0//newnullping
+- NewNullping
 - NullPing
 - Ping
 - PingJoin
@@ -137,7 +129,7 @@ java -jar XDDOS.jar
 - RAM
 - RandomExceptions
 - RandomPacket
-- ServerFucker//this is sf
+- ServerFucker
 - Slapper
 - SmartBot
 - Spoof
@@ -149,8 +141,12 @@ java -jar XDDOS.jar
 - uuidCrash
 - WaterfallBypass
 - XDJoin
-- xDSpam
-- YooniksCry
+- XDSpam
 
-### VirusTotal Scan
-https://www.virustotal.com/gui/file/fa3c335a366da31b825b06281dbad74bd590bd12acb53d6dc644c699d591cf2b
+
+##FAQ:
+#The colours are bugged
+Use -noansi at the end of the command or try using another terminal like Windows Terminal
+
+#XDDOS has a discord?
+Yes. You can join [here](https://discord.gg/WupDGR2Yee)
