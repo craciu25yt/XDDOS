@@ -114,7 +114,7 @@ public class Methods {
       registerMethod("tcpbypass", (IMethod)new TCPBYPASS());
       registerMethod("ultimatesmasher", (IMethod)new UltimateSmasher());
       registerMethod("serverfucker", (IMethod)new ServerFucker());
-      registerMethod("nabcry", (IMethod)new nAntiBotCry());
+      registerMethod("nantibot", (IMethod)new nAntiBotCry());
       registerMethod("xdjoin", (IMethod)new XDJOIN());
       registerMethod("ipSpooffflood", (IMethod)new IPSpoofFFlood());
       registerMethod("chatspam" , (IMethod)new ChatSpam());
