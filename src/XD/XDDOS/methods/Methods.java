@@ -113,7 +113,7 @@ public class Methods {
       registerMethod("queue", (IMethod)new queue());
       registerMethod("tcpbypass", (IMethod)new TCPBYPASS());
       registerMethod("ultimatesmasher", (IMethod)new UltimateSmasher());
-      registerMethod("sf", (IMethod)new ServerFucker());
+      registerMethod("serverfucker", (IMethod)new ServerFucker());
       registerMethod("nabcry", (IMethod)new nAntiBotCry());
       registerMethod("xdjoin", (IMethod)new XDJOIN());
       registerMethod("ipSpooffflood", (IMethod)new IPSpoofFFlood());
