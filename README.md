@@ -116,7 +116,7 @@ java -jar XDDOS.jar localhost:25565 47 botjoiner 10 -1 y
 - LongNames
 - Memory
 - MOTD
-- NabCry
+- nAntiBot
 - NettyDowner
 - Network
 - NewNullping
@@ -144,9 +144,9 @@ java -jar XDDOS.jar localhost:25565 47 botjoiner 10 -1 y
 - XDSpam
 
 
-##FAQ:
-#The colours are bugged
+## FAQ:
+### The colours are bugged
 Use -noansi at the end of the command or try using another terminal like Windows Terminal
 
-#XDDOS has a discord?
+### XDDOS has a discord?
 Yes. You can join [here](https://discord.gg/WupDGR2Yee)
