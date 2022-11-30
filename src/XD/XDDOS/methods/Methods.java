@@ -107,7 +107,7 @@ public class Methods {
       registerMethod("extremejoin", (IMethod)new ExtremeJoin());
       registerMethod("nettydowner", (IMethod)new NettyDowner());
       registerMethod("ram", (IMethod)new RAM());
-      registerMethod("yoonikscry", (IMethod)new YooniksCry());
+      registerMethod("aegis", (IMethod)new YooniksCry());
       registerMethod("colorcrasher", (IMethod)new ColorCrasher());
       registerMethod("tcphit", (IMethod)new TCPHIT());
       registerMethod("queue", (IMethod)new queue());
