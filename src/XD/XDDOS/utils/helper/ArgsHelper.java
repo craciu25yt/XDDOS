@@ -45,7 +45,7 @@ public class ArgsHelper {
                 "[22]" + XDDOS.CYAN_BOLD + " LongNames\n" + XDDOS.WHITE_BOLD +
                 "[23]" + XDDOS.CYAN_BOLD + " Memory\n" + XDDOS.WHITE_BOLD +
                 "[24]" + XDDOS.CYAN_BOLD + " MOTD\n" + XDDOS.WHITE_BOLD +
-                "[25]" + XDDOS.CYAN_BOLD + " NabCry\n" + XDDOS.WHITE_BOLD +
+                "[25]" + XDDOS.CYAN_BOLD + " nAntiBot\n" + XDDOS.WHITE_BOLD +
                 "[26]" + XDDOS.CYAN_BOLD + " NettyDowner\n" + XDDOS.WHITE_BOLD +
                 "[27]" + XDDOS.CYAN_BOLD + " Network\n" + XDDOS.WHITE_BOLD +
                 "[28]" + XDDOS.CYAN_BOLD + " NewNullPing\n" + XDDOS.WHITE_BOLD +
@@ -58,7 +58,7 @@ public class ArgsHelper {
                 "[35]" + XDDOS.CYAN_BOLD + " Ram\n" + XDDOS.WHITE_BOLD +
                 "[36]" + XDDOS.CYAN_BOLD + " RandomExceptions\n" + XDDOS.WHITE_BOLD +
                 "[37]" + XDDOS.CYAN_BOLD + " RandomPacket\n" + XDDOS.WHITE_BOLD +
-                "[38]" + XDDOS.CYAN_BOLD + " SF\n" + XDDOS.WHITE_BOLD +
+                "[38]" + XDDOS.CYAN_BOLD + " ServerFucker\n" + XDDOS.WHITE_BOLD +
                 "[39]" + XDDOS.CYAN_BOLD + " Slapper\n" + XDDOS.WHITE_BOLD +
                 "[40]" + XDDOS.CYAN_BOLD + " SmartBot\n" + XDDOS.WHITE_BOLD +
                 "[41]" + XDDOS.CYAN_BOLD + " Spoof\n" + XDDOS.WHITE_BOLD +
@@ -70,7 +70,7 @@ public class ArgsHelper {
                 "[47]" + XDDOS.CYAN_BOLD + " WaterFallBypass\n" + XDDOS.WHITE_BOLD +
                 "[48]" + XDDOS.CYAN_BOLD + " XDjoin\n" + XDDOS.WHITE_BOLD +
                 "[49]" + XDDOS.CYAN_BOLD + " XDSpam\n" + XDDOS.WHITE_BOLD +
-                "[50]" + XDDOS.CYAN_BOLD + " YooniksCry\n\n" + XDDOS.WHITE_BOLD +
+                "[50]" + XDDOS.CYAN_BOLD + " Aegis\n\n" + XDDOS.WHITE_BOLD +
                 "[" + XDDOS.RED_BOLD + "Experimental Methods" + XDDOS.WHITE_BOLD + "]" + "\n\n" + XDDOS.WHITE_BOLD +
                 "[01]" + XDDOS.CYAN_BOLD + " EmptyNames\n" + XDDOS.WHITE_BOLD +
                 "[02]" + XDDOS.CYAN_BOLD + " UUIDCrash\n" + XDDOS.WHITE_BOLD +
