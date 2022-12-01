@@ -107,14 +107,14 @@ public class Methods {
       registerMethod("extremejoin", (IMethod)new ExtremeJoin());
       registerMethod("nettydowner", (IMethod)new NettyDowner());
       registerMethod("ram", (IMethod)new RAM());
-      registerMethod("yoonikscry", (IMethod)new YooniksCry());
+      registerMethod("aegis", (IMethod)new YooniksCry());
       registerMethod("colorcrasher", (IMethod)new ColorCrasher());
       registerMethod("tcphit", (IMethod)new TCPHIT());
       registerMethod("queue", (IMethod)new queue());
       registerMethod("tcpbypass", (IMethod)new TCPBYPASS());
       registerMethod("ultimatesmasher", (IMethod)new UltimateSmasher());
-      registerMethod("sf", (IMethod)new ServerFucker());
-      registerMethod("nabcry", (IMethod)new nAntiBotCry());
+      registerMethod("serverfucker", (IMethod)new ServerFucker());
+      registerMethod("nantibot", (IMethod)new nAntiBotCry());
       registerMethod("xdjoin", (IMethod)new XDJOIN());
       registerMethod("ipSpooffflood", (IMethod)new IPSpoofFFlood());
       registerMethod("chatspam" , (IMethod)new ChatSpam());
