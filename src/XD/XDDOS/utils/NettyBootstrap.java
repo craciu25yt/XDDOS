@@ -35,7 +35,7 @@ public class NettyBootstrap {
     public static volatile int triedCPS = 0;
     public static final boolean disableFailedProxies;
     public static volatile int totalConnections = 0;
-    public static volatile int totalSeconds = 0;
+    public static volatile int totalSeconds = 1;
     public static Thread attack;
 
     static {

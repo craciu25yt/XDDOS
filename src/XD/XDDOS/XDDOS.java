@@ -69,12 +69,10 @@ public class XDDOS {
             "\n" + GREEN_BOLD +
             "STARTING\n" + RESET);
 
-      if (args.length == 1) {
          if (args[0] == "-update") {
             Update.updateJAR();
          }
-      }
-
+         
       if (args.length < 6) {
          ArgsHelper.UserFrndly(args);
       } else {
