@@ -131,7 +131,7 @@ public class NettyBootstrap {
                 } catch (InterruptedException var2) {
                 }
                 System.out.print("\r");
-                System.out.print(XDDOS.GREEN_BOLD+"["+XDDOS.RED_BOLD+"XDDOS"+XDDOS.GREEN_BOLD+"]"+XDDOS.WHITE_BOLD+" Current CPS: "+ XDDOS.GREEN_BOLD + integer + XDDOS.WHITE_BOLD+" Average CPS: "+ XDDOS.GREEN_BOLD +totalConnections/totalSeconds+XDDOS.WHITE_BOLD+ XDDOS.WHITE_BOLD+" TARGET CPS: "+ XDDOS.GREEN_BOLD +triedCPS+XDDOS.WHITE_BOLD+" Time Left: " + XDDOS.RED_BOLD +(XDDOS.duration-totalSeconds)+" sec"+XDDOS.RESET+"                                ");
+                System.out.print(XDDOS.GREEN_BOLD+"["+XDDOS.RED_BOLD+"XDDOS"+XDDOS.GREEN_BOLD+"]"+XDDOS.WHITE_BOLD+" Current CPS: "+ XDDOS.GREEN_BOLD + integer + XDDOS.WHITE_BOLD+" Average CPS: "+ XDDOS.GREEN_BOLD +totalConnections/totalSeconds+XDDOS.WHITE_BOLD+ " TARGET CPS: "+ XDDOS.GREEN_BOLD +triedCPS+XDDOS.WHITE_BOLD+" Time Left: " + XDDOS.RED_BOLD +(XDDOS.duration-totalSeconds)+" sec"+XDDOS.RESET+"                                ");
                 ++totalSeconds;
                 integer = 0;
                 triedCPS = 0;
