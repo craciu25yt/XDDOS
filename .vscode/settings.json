@@ -7,7 +7,7 @@
     "java.configuration.runtimes": [
         {
             "name":"JavaSE-1.8",
-            "path":"/usr/lib/jvm/java-8-openjdk-amd64/",
+            "path":"/usr/lib/jvm/bellsoft-java8-full-amd64/",
             "default": true
         }
     ]
