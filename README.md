@@ -149,4 +149,4 @@ java -jar XDDOS.jar localhost:25565 47 botjoiner 10 -1 y
 Use -noansi at the end of the command or try using another terminal like Windows Terminal
 
 ### XDDOS has a discord?
-Yes. You can join [here](https://discord.gg/WupDGR2Yee)
+Yes. You can join [here](https://discord.gg/U3TN8SPgvz)
